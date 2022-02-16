@@ -1,0 +1,2 @@
+com/team11/genshinhelper/BuildConfig.java
+ com.team11.genshinhelper.BuildConfig
