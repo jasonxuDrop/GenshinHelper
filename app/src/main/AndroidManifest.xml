@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GenshinHelper">
         <activity
+            android:name=".ResinTimerEditActivity"
+            android:exported="false" />
+        <activity
             android:name=".ResinTimerActivity"
             android:exported="true">
             <intent-filter>
