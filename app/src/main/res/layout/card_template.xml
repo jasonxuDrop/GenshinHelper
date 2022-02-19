@@ -6,16 +6,19 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/CardLayout"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="2dp"
         android:background="@drawable/card_background"
         android:orientation="vertical"
-        android:padding="2dp">
+        android:padding="3dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/CardImage"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="2dp">
 
             <ImageView
                 android:id="@+id/CardImageFrame"
@@ -58,7 +61,7 @@
             android:id="@+id/CardTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello world"
+            android:text="Arataki Itto"
             android:textAlignment="center"
             android:textColor="@color/black" />
 
@@ -69,6 +72,92 @@
             android:text="Hello world"
             android:textAlignment="center"
             android:textColor="#929091" />
+
+        <LinearLayout
+            android:id="@+id/CardElementRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/CardElementIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/element_electro" />
+
+            <TextView
+                android:id="@+id/CardElementName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Electro"
+                android:textColor="#7F569B" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CardRarityRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="center|center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/CardRarityStar1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/card_star" />
+
+            <ImageView
+                android:id="@+id/CardRarityStar2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/card_star" />
+
+            <ImageView
+                android:id="@+id/CardRarityStar3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/card_star" />
+
+            <ImageView
+                android:id="@+id/CardRarityStar4"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/card_star" />
+
+            <ImageView
+                android:id="@+id/CardRarityStar5"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_weight="0"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/card_star" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </merge>
