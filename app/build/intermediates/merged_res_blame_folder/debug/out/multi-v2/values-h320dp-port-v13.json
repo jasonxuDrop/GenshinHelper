@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+            "outputFile": "C:\\Users\\Taha Shaikh\\Documents\\GitHub\\GenshinHelper\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\lemon\\.gradle\\caches\\transforms-3\\ef532b6d1ae35b007ac277b7869ad55e\\transformed\\material-1.5.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\Taha Shaikh\\.gradle\\caches\\transforms-3\\ef532b6d1ae35b007ac277b7869ad55e\\transformed\\material-1.5.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

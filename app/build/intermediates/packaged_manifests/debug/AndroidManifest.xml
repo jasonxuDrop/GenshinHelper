@@ -20,7 +20,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.GenshinHelper" >
         <activity
-            android:name="com.team11.genshinhelper.MainActivity"
+            android:name="com.team11.genshinhelper.ResinTimerActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +28,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
