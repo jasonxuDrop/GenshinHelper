@@ -10,11 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GenshinHelper">
         <activity
-            android:name=".ExampleSearchActivity"
-            android:exported="false" />
-        <activity
             android:name=".ResinTimerEditActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ResinTimerActivity"
             android:exported="true">
