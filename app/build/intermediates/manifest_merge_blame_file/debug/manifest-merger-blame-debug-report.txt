@@ -11,7 +11,7 @@
 9-->C:\Users\Taha Shaikh\Documents\GitHub\GenshinHelper\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\Taha Shaikh\Documents\GitHub\GenshinHelper\app\src\main\AndroidManifest.xml:5:5-24:19
+11-->C:\Users\Taha Shaikh\Documents\GitHub\GenshinHelper\app\src\main\AndroidManifest.xml:5:5-25:19
 12        android:allowBackup="true"
 12-->C:\Users\Taha Shaikh\Documents\GitHub\GenshinHelper\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -48,11 +48,11 @@
 30        </activity>
 31
 32        <meta-data
-32-->C:\Users\Taha Shaikh\Documents\GitHub\GenshinHelper\app\src\main\AndroidManifest.xml:21:9-23:57
+32-->C:\Users\Taha Shaikh\Documents\GitHub\GenshinHelper\app\src\main\AndroidManifest.xml:22:9-24:57
 33            android:name="preloaded_fonts"
-33-->C:\Users\Taha Shaikh\Documents\GitHub\GenshinHelper\app\src\main\AndroidManifest.xml:22:13-43
+33-->C:\Users\Taha Shaikh\Documents\GitHub\GenshinHelper\app\src\main\AndroidManifest.xml:23:13-43
 34            android:resource="@array/preloaded_fonts" />
-34-->C:\Users\Taha Shaikh\Documents\GitHub\GenshinHelper\app\src\main\AndroidManifest.xml:23:13-54
+34-->C:\Users\Taha Shaikh\Documents\GitHub\GenshinHelper\app\src\main\AndroidManifest.xml:24:13-54
 35
 36        <provider
 36-->[androidx.emoji2:emoji2:1.0.0] C:\Users\Taha Shaikh\.gradle\caches\transforms-3\86bbdb4c704f0c6ef69f85fd6941d5d8\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
