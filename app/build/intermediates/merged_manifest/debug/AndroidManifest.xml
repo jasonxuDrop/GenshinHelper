@@ -20,7 +20,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.GenshinHelper" >
         <activity
-            android:name="com.team11.genshinhelper.MainActivity"
+            android:name="com.team11.genshinhelper.ResinTimerEditActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.team11.genshinhelper.ResinTimerActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
