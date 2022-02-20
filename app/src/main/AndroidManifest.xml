@@ -11,7 +11,7 @@
         android:theme="@style/Theme.GenshinHelper">
         <activity
             android:name=".ResinTimerEditActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ResinTimerActivity"
             android:exported="true">
