@@ -7,36 +7,6 @@
     android:background="@drawable/background_gradient"
     tools:context=".ResinTimerEditActivity">
 
-    <!--    <ImageView-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:adjustViewBounds="true"-->
-    <!--        android:contentDescription="pop up frame"-->
-    <!--        android:paddingLeft="25dp"-->
-    <!--        android:paddingTop="25dp"-->
-    <!--        android:paddingRight="25dp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        app:srcCompat="@drawable/popup_frame" >-->
-    <!--    </ImageView>-->
-
-
-    <!--    <View-->
-    <!--        android:id="@+id/view"-->
-    <!--        android:layout_width="310dp"-->
-    <!--        android:layout_height="408dp"-->
-    <!--        android:layout_marginTop="25dp"-->
-    <!--        android:background="@drawable/popup_frame"-->
-    <!--        android:paddingLeft="25dp"-->
-    <!--        android:paddingTop="25dp"-->
-    <!--        android:paddingRight="25dp"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent">-->
-    <!--        -->
-    <!--    </View>-->
-
     <LinearLayout
         android:layout_width="310dp"
         android:layout_height="408dp"
@@ -82,7 +52,7 @@
                 android:layout_marginRight="14dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="Underline color change"
+                android:hint=""
                 android:inputType="number"
                 android:text="123"
                 android:textColor="#D7D0C6"

@@ -80,12 +80,12 @@
         "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\drawable\\example_item_raw_meat.png"
     },
     {
-        "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_card_background_4_star.png.flat",
         "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\drawable\\card_background_4_star.png"
+    },
+    {
+        "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_element_electro.png.flat",
@@ -148,12 +148,12 @@
         "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\drawable\\background_gradient.xml"
     },
     {
-        "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_example_character_klee_thumb.png.flat",
         "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\drawable\\example_character_klee_thumb.png"
+    },
+    {
+        "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
         "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_secondary.xml.flat",
@@ -176,12 +176,12 @@
         "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_example_item_dust_of_azoth.png.flat",
-        "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\drawable\\example_item_dust_of_azoth.png"
-    },
-    {
         "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_secondary_text_color.xml.flat",
         "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\drawable\\button_secondary_text_color.xml"
+    },
+    {
+        "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\drawable_example_item_dust_of_azoth.png.flat",
+        "source": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\src\\main\\res\\drawable\\example_item_dust_of_azoth.png"
     },
     {
         "merged": "D:\\Users\\lemon\\Documents\\Git\\IAT359-GenshinHelper\\GenshinHelperApp\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
