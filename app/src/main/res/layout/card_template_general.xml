@@ -12,7 +12,8 @@
         android:layout_marginBottom="2dp"
         android:background="@drawable/card_background"
         android:orientation="vertical"
-        android:padding="3dp">
+        android:padding="3dp"
+        android:paddingBottom="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/CardImage"
@@ -61,7 +62,7 @@
             android:id="@+id/CardTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Arataki Itto"
+            android:text="Card General"
             android:textAlignment="center"
             android:textColor="@color/black" />
 
