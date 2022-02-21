@@ -7,12 +7,19 @@
     android:background="@drawable/background_gradient">
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="355dp"
         android:layout_height="350dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="1dp"
         android:background="@drawable/button_secondary_pressed"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="27dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView"
@@ -44,11 +51,12 @@
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_height="30dp"
-                    android:layout_marginRight="0"
+                    android:layout_marginRight="0dp"
                     android:layout_weight="1"
                     android:scaleType="fitStart"
                     android:translationY="-25dp"
-                    app:srcCompat="@drawable/element_electro" />
+                    app:srcCompat="@drawable/element_electro"
+                    android:layout_width="0dp"/>
 
                 <TextView
                     android:id="@+id/textView2"
@@ -57,10 +65,11 @@
                     android:layout_weight="1"
                     android:text="Electro"
                     android:textColor="#7F569B"
-                    android:translationY="-25dp" />
+                    android:translationY="-25dp"
+                    android:layout_width="0dp"/>
 
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/RarityStar2"
                     android:layout_width="15dp"
                     android:layout_height="13dp"
                     android:translationX="-290dp"
@@ -68,7 +77,7 @@
                     app:srcCompat="@drawable/card_star" />
 
                 <ImageView
-                    android:id="@+id/imageView8"
+                    android:id="@+id/RarityStar3"
                     android:layout_width="15dp"
                     android:layout_height="13dp"
                     android:translationX="-290dp"
@@ -76,7 +85,7 @@
                     app:srcCompat="@drawable/card_star" />
 
                 <ImageView
-                    android:id="@+id/imageView9"
+                    android:id="@+id/RarityStar4"
                     android:layout_width="15dp"
                     android:layout_height="13dp"
                     android:translationX="-290dp"
@@ -84,7 +93,7 @@
                     app:srcCompat="@drawable/card_star" />
 
                 <ImageView
-                    android:id="@+id/imageView10"
+                    android:id="@+id/RarityStar5"
                     android:layout_width="15dp"
                     android:layout_height="13dp"
                     android:translationX="-290dp"
@@ -96,11 +105,17 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="392dp"
         android:layout_height="186dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="5dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="378dp">
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <TextView
             android:id="@+id/Description"
@@ -196,19 +211,29 @@
         android:id="@+id/textView14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="1dp"
         android:text="Constellations"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="569dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout6"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
         tools:layout_marginLeft="15dp" />
 
     <LinearLayout
-        android:layout_width="391dp"
-        android:layout_height="248dp"
+        android:id="@+id/linearLayout6"
+        android:layout_width="407dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="602dp">
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14">
 
         <ImageView
             android:id="@+id/imageView14"
@@ -240,12 +265,13 @@
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView3"
         android:layout_width="400dp"
         android:layout_height="60dp"
         android:background="#1C1C1E"
-        tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="791dp"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="666dp">
 
         <Button
             android:id="@+id/ResinNav"
