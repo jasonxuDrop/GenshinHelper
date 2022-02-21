@@ -1,5 +1,7 @@
 package com.team11.genshinhelper
 
+import com.team11.genshinhelper.ResinTimerActivity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -8,6 +10,8 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 
 class ResinTimerEditActivity : AppCompatActivity() {
 
@@ -27,6 +31,11 @@ class ResinTimerEditActivity : AppCompatActivity() {
 
 //        TODO: use `resinInput.setText("68")` to edit the current resin amount when page opens
 //        TODO: use `resinInput.text.toString().toInt() for getting the value the user put in
+
+        findViewById<Button>(R.id.SaveButton).setOnClickListener{
+            val intent = Intent(this, ResinTimerActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     class ResinEditTextWatcher: TextWatcher {
@@ -67,5 +76,13 @@ class ResinTimerEditActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    class SaveButtonListener : View.OnClickListener {
+        override fun onClick(p0: View?) {
+
+
+        }
+
     }
 }
