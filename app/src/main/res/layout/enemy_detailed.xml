@@ -7,12 +7,17 @@
     android:background="@drawable/background_gradient">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="355dp"
         android:layout_height="350dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="1dp"
         android:background="@drawable/button_secondary_pressed"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="27dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView"
@@ -44,14 +49,15 @@
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_height="30dp"
-                    android:layout_marginRight="0"
                     android:layout_weight="1"
                     android:scaleType="fitStart"
                     android:translationY="-25dp"
-                    app:srcCompat="@drawable/element_electro" />
+                    app:srcCompat="@drawable/element_electro"
+                    android:layout_width="0dp" />
 
                 <TextView
                     android:id="@+id/textView2"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-220dp"
                     android:layout_weight="1"
@@ -60,7 +66,7 @@
                     android:translationY="-25dp" />
 
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/RarityStar2"
                     android:layout_width="15dp"
                     android:layout_height="13dp"
                     android:translationX="-290dp"
@@ -68,7 +74,7 @@
                     app:srcCompat="@drawable/card_star" />
 
                 <ImageView
-                    android:id="@+id/imageView8"
+                    android:id="@+id/RarityStar3"
                     android:layout_width="15dp"
                     android:layout_height="13dp"
                     android:translationX="-290dp"
@@ -76,7 +82,7 @@
                     app:srcCompat="@drawable/card_star" />
 
                 <ImageView
-                    android:id="@+id/imageView9"
+                    android:id="@+id/RarityStar4"
                     android:layout_width="15dp"
                     android:layout_height="13dp"
                     android:translationX="-290dp"
@@ -84,7 +90,7 @@
                     app:srcCompat="@drawable/card_star" />
 
                 <ImageView
-                    android:id="@+id/imageView10"
+                    android:id="@+id/RarityStar5"
                     android:layout_width="15dp"
                     android:layout_height="13dp"
                     android:translationX="-290dp"
@@ -96,11 +102,18 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="392dp"
         android:layout_height="186dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="5dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="378dp">
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <TextView
             android:id="@+id/Description"
@@ -196,19 +209,31 @@
         android:id="@+id/textView14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="1dp"
         android:text="Constellations"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="569dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:layout_marginLeft="15dp" />
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="390dp"
         android:layout_height="55dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="602dp">
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14">
 
         <ImageView
             android:id="@+id/imageView14"
@@ -240,12 +265,14 @@
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="400dp"
-        android:layout_height="60dp"
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="410dp"
+        android:layout_height="62dp"
         android:background="#1C1C1E"
-        tools:layout_editor_absoluteX="-4dp"
-        tools:layout_editor_absoluteY="791dp"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="671dp">
 
         <Button
             android:id="@+id/ResinNav"
