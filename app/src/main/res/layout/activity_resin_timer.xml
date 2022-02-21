@@ -74,13 +74,27 @@
         app:srcCompat="@drawable/ic_button_light" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="60dp"
         android:background="#1C1C1E"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="791dp" >
+
+        <Button
+            android:id="@+id/ResinNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Resin"
+            android:translationX="10dp" />
+
+        <Button
+            android:id="@+id/SearchNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Search"
+            android:translationX="300dp" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
