@@ -8,15 +8,18 @@
     tools:context=".ResinTimerEditActivity">
 
     <LinearLayout
-        android:layout_width="310dp"
-        android:layout_height="408dp"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="25dp"
-        android:background="@drawable/popup_frame"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/popup_frame_flex"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:paddingLeft="25dp"
         android:paddingTop="25dp"
         android:paddingRight="25dp"
+        android:paddingBottom="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -78,7 +81,7 @@
             <Button
                 android:id="@+id/Add5Button"
                 android:layout_width="wrap_content"
-                android:layout_height="34dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button_secondary"
                 android:text="+ 5"
@@ -93,7 +96,7 @@
             <Button
                 android:id="@+id/Sub5Button"
                 android:layout_width="wrap_content"
-                android:layout_height="34dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button_secondary"
                 android:text="- 5"
@@ -110,7 +113,7 @@
             <Button
                 android:id="@+id/Add20Button"
                 android:layout_width="wrap_content"
-                android:layout_height="34dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button_secondary"
                 android:text="+ 20"
@@ -125,7 +128,7 @@
             <Button
                 android:id="@+id/Sub20Button"
                 android:layout_width="wrap_content"
-                android:layout_height="34dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button_secondary"
                 android:text="- 20"
@@ -137,12 +140,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingBottom="10dp">
+            android:paddingBottom="30dp">
 
             <Button
                 android:id="@+id/Add40Button"
                 android:layout_width="wrap_content"
-                android:layout_height="34dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button_secondary"
                 android:text="+ 40"
@@ -157,7 +160,7 @@
             <Button
                 android:id="@+id/Sub40Button"
                 android:layout_width="wrap_content"
-                android:layout_height="34dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/button_secondary"
                 android:text="- 40"
