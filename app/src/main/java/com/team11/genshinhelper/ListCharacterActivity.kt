@@ -1,10 +1,10 @@
 package com.team11.genshinhelper
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import android.content.Intent
 
 class ListCharacterActivity : AppCompatActivity() {
 
@@ -38,9 +38,36 @@ class ListCharacterActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-//      findViewById<ImageButton>(R.id.SearchNav).setOnClickListener{
-//          val intent = Intent(this, ResinTimerEditActivity::class.java)
-//          startActivity(intent)
-//      }
+        findViewById<Button>(R.id.SearchNav).setOnClickListener{
+            //val intentStringValue: String = "List" + result.text + "Activity"
+            if(result.text == "Characters") {
+                val intent = Intent(this, ListCharacterActivity::class.java)
+                startActivity(intent)
+            }
+            if(result.text == "Materials") {
+                val intent = Intent(this, ListMaterialActivity::class.java)
+                startActivity(intent)
+            }
+            if(result.text == "Consumables") {
+                val intent = Intent(this, ListConsumableActivity::class.java)
+                startActivity(intent)
+            }
+            if(result.text == "Weapons") {
+                val intent = Intent(this, ListWeaponActivity::class.java)
+                startActivity(intent)
+            }
+            if(result.text == "Artifacts") {
+                val intent = Intent(this, ListArtifactActivity::class.java)
+                startActivity(intent)
+            }
+            if(result.text == "Enemies") {
+                val intent = Intent(this, ListEnemyActivity::class.java)
+                startActivity(intent)
+            }
+            else {
+
+            }
+        }
     }
+
 }
