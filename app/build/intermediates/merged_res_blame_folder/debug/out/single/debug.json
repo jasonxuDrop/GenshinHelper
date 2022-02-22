@@ -224,6 +224,10 @@
         "source": "C:\\Users\\Taha Shaikh\\Documents\\GitHub\\GenshinHelper\\app\\src\\main\\res\\drawable\\example_item_qingxin.png"
     },
     {
+        "merged": "C:\\Users\\Taha Shaikh\\Documents\\GitHub\\GenshinHelper\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle.xml.flat",
+        "source": "C:\\Users\\Taha Shaikh\\Documents\\GitHub\\GenshinHelper\\app\\src\\main\\res\\drawable\\circle.xml"
+    },
+    {
         "merged": "C:\\Users\\Taha Shaikh\\Documents\\GitHub\\GenshinHelper\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Taha Shaikh\\Documents\\GitHub\\GenshinHelper\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
     },
