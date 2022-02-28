@@ -33,7 +33,7 @@ class ListCharacterActivity : AppCompatActivity() {
             }
         }
 
-        findViewById<ImageButton>(R.id.ResinNav).setOnClickListener{
+        findViewById<Button>(R.id.ResinNav).setOnClickListener{
             val intent = Intent(this, ResinTimerActivity::class.java)
             startActivity(intent)
         }
