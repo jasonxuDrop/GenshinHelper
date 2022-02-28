@@ -13,6 +13,21 @@
             android:name=".ListCharacterActivity"
             android:exported="false" />
         <activity
+            android:name=".ListConsumableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListArtifactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListEnemyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListMaterialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListWeaponActivity"
+            android:exported="false" />
+        <activity
             android:name=".ResinTimerEditActivity"
             android:exported="true" />
         <activity
