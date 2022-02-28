@@ -11,7 +11,7 @@ class ListCharacterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.character_list)
 
-        findViewById<Button>(R.id.ResinNav).setOnClickListener{
+        findViewById<ImageButton>(R.id.ResinNav).setOnClickListener{
             val intent = Intent(this, ResinTimerActivity::class.java)
             startActivity(intent)
         }
