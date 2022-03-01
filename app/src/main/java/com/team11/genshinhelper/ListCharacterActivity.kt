@@ -33,12 +33,12 @@ class ListCharacterActivity : AppCompatActivity() {
             }
         }
 
-        findViewById<Button>(R.id.ResinNav).setOnClickListener{
+        findViewById<ImageButton>(R.id.ResinNav).setOnClickListener{
             val intent = Intent(this, ResinTimerActivity::class.java)
             startActivity(intent)
         }
 
-        findViewById<Button>(R.id.SearchNav).setOnClickListener{
+        findViewById<ImageButton>(R.id.SearchNav).setOnClickListener{
             //val intentStringValue: String = "List" + result.text + "Activity"
             if(result.text == "Characters") {
                 val intent = Intent(this, ListCharacterActivity::class.java)
