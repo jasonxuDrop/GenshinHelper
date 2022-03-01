@@ -108,33 +108,35 @@
     </TableLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView2"
-        android:layout_width="411dp"
-        android:layout_height="61dp"
+        android:layout_width="414dp"
+        android:layout_height="59dp"
         android:background="#1C1C1E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <ImageButton
             android:id="@+id/ResinNav"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
             android:text="Resin"
-            android:translationX="10dp" />
+            android:translationX="10dp"
+            android:translationY="5dp"
+            app:srcCompat="@drawable/resin_button" />
 
-        <Button
+        <ImageButton
             android:id="@+id/SearchNav"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
             android:text="Search"
-            android:translationX="300dp" />
+            android:translationX="265dp"
+            android:translationY="5dp"
+            app:srcCompat="@drawable/search_button" />
+
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
