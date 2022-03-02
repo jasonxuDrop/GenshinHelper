@@ -38,7 +38,7 @@
         android:scrollIndicators="right"
         android:scrollbarAlwaysDrawVerticalTrack="true"
         android:scrollbarStyle="insideInset"
-        android:scrollbarThumbVertical="@drawable/popup_frame_flex"
+        android:scrollbarThumbVertical="@drawable/scroll_bar_flex2"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"

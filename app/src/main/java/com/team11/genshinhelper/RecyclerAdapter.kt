@@ -20,8 +20,8 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         "Sword6",
         "Sword7",
         "Sword8",
-        "Sword9",
-        "Sword10",
+        "Sword9isalongword",
+        "Sword10 and extra words",
     )
     private var backgroundImages = arrayOf(
         R.drawable.card_background_1_star,
