@@ -28,7 +28,7 @@
         app:srcCompat="@drawable/example_character_diluc_thumb" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
@@ -64,7 +64,7 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
 
     <ImageView
         android:id="@+id/imageView8"
