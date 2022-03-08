@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CardElementRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center|center_horizontal"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/CardElementIcon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_weight="0"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/element_cryo" />
+
+    <TextView
+        android:id="@+id/CardElementName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Cryo"
+        android:textColor="#67bbce" />
+
+</LinearLayout>

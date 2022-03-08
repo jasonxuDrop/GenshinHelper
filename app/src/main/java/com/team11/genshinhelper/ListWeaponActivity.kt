@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 class ListWeaponActivity : AppCompatActivity() {
 
     private var layoutManager: RecyclerView.LayoutManager? = null;
-    private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolderWeapon>? = null;
+    private var adapter: RecyclerView.Adapter<RecyclerAdapterWeapon.ViewHolderWeapon>? = null;
 
     lateinit var option: Spinner
     lateinit var result: TextView
@@ -76,7 +76,7 @@ class ListWeaponActivity : AppCompatActivity() {
         // RECYCLER VIEW STUFF
         val recyclerView = findViewById<RecyclerView>(R.id.RecyclerView)
         layoutManager = GridLayoutManager(this, 3)
-        adapter = RecyclerAdapter()
+        adapter = RecyclerAdapterWeapon()
 
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
