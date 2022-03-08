@@ -5,8 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class ListWeaponActivity : AppCompatActivity() {
+
+    private var layoutManager: RecyclerView.LayoutManager? = null;
+    private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolderWeapon>? = null;
 
     lateinit var option: Spinner
     lateinit var result: TextView
@@ -15,8 +20,8 @@ class ListWeaponActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.weapon_list)
 
-        option = findViewById(R.id.spnOption) as Spinner
-        result = findViewById(R.id.spnText) as TextView
+        option = findViewById<Spinner>(R.id.spnOption)
+        //result = findViewById<TextView>(R.id.spnText)
 
         val options = arrayOf("Characters", "Materials", "Consumables", "Weapons", "Artifacts", "Enemies")
 
@@ -24,11 +29,11 @@ class ListWeaponActivity : AppCompatActivity() {
 
         option.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                result.text = options.get(position)
+                //result.text = options.get(position)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                result.text = "Please select an option"
+                //result.text = "Please select an option"
             }
         }
 
@@ -67,5 +72,13 @@ class ListWeaponActivity : AppCompatActivity() {
 
             }
         }
+
+        // RECYCLER VIEW STUFF
+        val recyclerView = findViewById<RecyclerView>(R.id.RecyclerView)
+        layoutManager = GridLayoutManager(this, 3)
+        adapter = RecyclerAdapter()
+
+        recyclerView.layoutManager = layoutManager
+        recyclerView.adapter = adapter
     }
 }
