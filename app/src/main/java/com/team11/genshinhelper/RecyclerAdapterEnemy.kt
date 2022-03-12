@@ -4,12 +4,39 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewStub
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolderWeapon>() {
+class RecyclerAdapterEnemy : RecyclerView.Adapter<RecyclerAdapterEnemy.ViewHolder>() {
 
+    // COMMON CARD ELEMENTS
+    private val backgroundImages = arrayOf(
+        R.drawable.card_background_1_star,
+        R.drawable.card_background_2_star,
+        R.drawable.card_background_3_star,
+        R.drawable.card_background_4_star,
+        R.drawable.card_background_5_star,
+    )
+    private val starLayout = arrayOf(
+        R.layout.card_stars_1,
+        R.layout.card_stars_2,
+        R.layout.card_stars_3,
+        R.layout.card_stars_4,
+        R.layout.card_stars_5,
+    )
+    private val elementLayout = arrayOf(
+        R.layout.card_element_anemo,
+        R.layout.card_element_cryo,
+        R.layout.card_element_dendro,
+        R.layout.card_element_electro,
+        R.layout.card_element_geo,
+        R.layout.card_element_hydro,
+        R.layout.card_element_pyro,
+    )
+
+    // PLACEHOLDER VALUES
     private var titles = arrayOf(
         "Sword1",
         "Sword2",
@@ -22,23 +49,18 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolderWeapon>()
         "Sword9isalongword",
         "Sword10 and extra words",
     )
-    private var backgroundImages = arrayOf(
-        R.drawable.card_background_1_star,
-        R.drawable.card_background_2_star,
-        R.drawable.card_background_3_star,
-        R.drawable.card_background_4_star,
-        R.drawable.card_background_5_star,
-    )
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.ViewHolderWeapon {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapterEnemy.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.card_template_weapon, parent, false)
-        return ViewHolderWeapon(v)
+        return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: RecyclerAdapter.ViewHolderWeapon, position: Int) {
+    override fun onBindViewHolder(holder: RecyclerAdapterEnemy.ViewHolder, position: Int) {
         holder.title.text = titles[position]
         holder.imageBackground.setImageResource(backgroundImages[position%5])
         holder.image.setImageResource(R.drawable.example_weapon_polar_star)
+        holder.starStub.layoutResource = starLayout[position%5]//[]3-1]
+        val starViewInflated: View = holder.starStub.inflate()
         println("TODO populate with database data")
     }
 
@@ -48,11 +70,12 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolderWeapon>()
     }
 
 
-    inner class ViewHolderWeapon(itemView: View): RecyclerView.ViewHolder(itemView) {
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var image: ImageView
         var imageBackground: ImageView
         var title : TextView
         var star1 : ImageView
+        var starStub : ViewStub
 
 
         init {
@@ -60,6 +83,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolderWeapon>()
             imageBackground = itemView.findViewById(R.id.CardImageBackground)
             title = itemView.findViewById(R.id.CardTitle)
             star1 = itemView.findViewById(R.id.CardRarityStar1)
+            starStub = itemView.findViewById(R.id.CardStarsStub)
 
             itemView.setOnClickListener{
                 val intent = Intent(itemView.context, DetailCharacterActivity::class.java)
