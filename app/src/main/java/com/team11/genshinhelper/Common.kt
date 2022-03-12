@@ -49,10 +49,6 @@ class Common {
             R.layout.card_stars_4,
             R.layout.card_stars_5,
         )
-
-        public enum class Element {
-            Anemo, Cryo, Dendro, Electro, Geo, Hydro, Pyro
-        }
     }
 
 }

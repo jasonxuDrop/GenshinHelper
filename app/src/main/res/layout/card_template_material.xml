@@ -48,7 +48,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/example_item_crab_ham_veggie_bake" />
+                app:srcCompat="@drawable/example_item_prithiva_topaz_gemstone" />
 
             <ImageView
                 android:id="@+id/CardImageBackground"
@@ -74,7 +74,7 @@
                 android:id="@+id/CardTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Consumable Name"
+                android:text="Material Name"
                 android:textAlignment="center"
                 android:textColor="@color/black" />
 
