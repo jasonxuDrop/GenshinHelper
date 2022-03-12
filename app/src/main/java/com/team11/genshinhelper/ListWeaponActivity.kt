@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 class ListWeaponActivity : AppCompatActivity() {
 
     private var layoutManager: RecyclerView.LayoutManager? = null;
-    private var adapter: RecyclerView.Adapter<RecyclerAdapterWeapon.ViewHolderWeapon>? = null;
+    private var adapter: RecyclerView.Adapter<RecyclerAdapterWeapon.ViewHolder>? = null;
 
     lateinit var option: Spinner
     lateinit var result: TextView
