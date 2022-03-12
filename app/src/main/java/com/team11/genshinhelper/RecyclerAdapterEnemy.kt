@@ -31,19 +31,19 @@ class RecyclerAdapterEnemy : RecyclerView.Adapter<RecyclerAdapterEnemy.ViewHolde
     }
     // PLACEHOLDER VALUES
     private val titles = arrayOf(
-        "enmey 1",
-        "enmey 22",
-        "enmey 3",
-        "enmey 4",
-        "Sword5",
-        "enmey 6",
-        "enmey 7",
-        "Sword8",
-        "enmey 9",
-        "enmey 10",
-        "Sword 11",
-        "enmey 12",
-        "enmey 13",
+        "Enemy 1",
+        "Enemy 2",
+        "Enemy 3",
+        "Enemy 4",
+        "Enemy 5",
+        "Enemy 6",
+        "Enemy 7",
+        "Enemy 8",
+        "Enemy 9",
+        "Enemy 10",
+        "Enemy 11 has a longer name",
+        "Enemy 12",
+        "Enemy 13",
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapterEnemy.ViewHolder {

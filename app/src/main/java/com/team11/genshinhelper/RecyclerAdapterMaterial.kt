@@ -14,30 +14,30 @@ class RecyclerAdapterMaterial : RecyclerView.Adapter<RecyclerAdapterMaterial.Vie
 
     // PLACEHOLDER VALUES
     private val titles = arrayOf(
-        "enmey 1",
-        "enmey 22",
-        "enmey 3",
-        "enmey 4",
-        "Sword5",
-        "enmey 6",
-        "enmey 7",
-        "Sword8",
-        "enmey 9",
-        "enmey 10",
-        "Sword 11",
-        "enmey 12",
-        "enmey 13",
+        "Material 1",
+        "Material 2",
+        "Material 3",
+        "Material 4",
+        "Material 5",
+        "Material 6",
+        "Material 7",
+        "Material 8",
+        "Material 9",
+        "Material 10",
+        "Material 11 has a longer name",
+        "Material 12",
+        "Material 13",
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapterMaterial.ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.card_template_enemy, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.card_template_material, parent, false)
         return ViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: RecyclerAdapterMaterial.ViewHolder, position: Int) {
         holder.title.text = titles[position] // TODO set item name
         holder.subtitle.text = "Something" // TODO set secondary information
-        holder.image.setImageResource(R.drawable.example_enemy_pyro_abyss_mage_icon) // TODO set item image
+        holder.image.setImageResource(R.drawable.example_item_prithiva_topaz_gemstone) // TODO set item image
         holder.imageBackground.setImageResource(Common.backgroundImages[position%5]) // TODO set star/rarity background (ie. 3 star item => Common.backgroundImages[3-1])
         // TODO populate with database data
     }

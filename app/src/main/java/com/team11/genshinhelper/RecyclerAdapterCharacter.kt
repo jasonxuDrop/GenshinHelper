@@ -14,29 +14,29 @@ class RecyclerAdapterCharacter : RecyclerView.Adapter<RecyclerAdapterCharacter.V
 
     // PLACEHOLDER VALUES
     private val titles = arrayOf(
-        "enmey 1",
-        "enmey 22",
-        "enmey 3",
-        "enmey 4",
-        "Sword5",
-        "enmey 6",
-        "enmey 7",
-        "Sword8",
-        "enmey 9",
-        "enmey 10",
-        "Sword 11",
-        "enmey 12",
-        "enmey 13",
+        "Character 1",
+        "Character 2",
+        "Character 3",
+        "Character 4",
+        "Character 5",
+        "Character 6",
+        "Character 7",
+        "Character 8",
+        "Character 9",
+        "Character 10",
+        "Character 11 has a longer name",
+        "Character 12",
+        "Character 13",
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapterCharacter.ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.card_template_enemy, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.card_template_character, parent, false)
         return ViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: RecyclerAdapterCharacter.ViewHolder, position: Int) {
         holder.title.text = titles[position] // TODO set item name
-        holder.image.setImageResource(R.drawable.example_enemy_pyro_abyss_mage_icon) // TODO set item image
+        holder.image.setImageResource(R.drawable.example_character_beidou_thumb) // TODO set item image
         holder.imageBackground.setImageResource(Common.backgroundImages[position%5]) // TODO set star/rarity background (ie. 3 star item => Common.backgroundImages[3-1])
         if (holder.elementStubInflated == null){
             holder.elementStub.layoutResource = Element.Geo.layout // TODO set star/rarity (ie. Electro element => Element.Electro.layout)

@@ -12,8 +12,12 @@ import androidx.recyclerview.widget.RecyclerView
 class ListWeaponActivity : AppCompatActivity() {
 
     private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapterWeapon: RecyclerView.Adapter<RecyclerAdapterWeapon.ViewHolder>? = null
+    private var adapterArtifact: RecyclerView.Adapter<RecyclerAdapterArtifact.ViewHolder>? = null
+    private var adapterCharacter: RecyclerView.Adapter<RecyclerAdapterCharacter.ViewHolder>? = null
+    private var adapterConsumable: RecyclerView.Adapter<RecyclerAdapterConsumable.ViewHolder>? = null
     private var adapterEnemy: RecyclerView.Adapter<RecyclerAdapterEnemy.ViewHolder>? = null
+    private var adapterMaterial: RecyclerView.Adapter<RecyclerAdapterMaterial.ViewHolder>? = null
+    private var adapterWeapon: RecyclerView.Adapter<RecyclerAdapterWeapon.ViewHolder>? = null
     private var selectedAdapter : RecyclerView.Adapter<out RecyclerView.ViewHolder>? = null
     private lateinit var recyclerView : RecyclerView
     lateinit var adapters : Array<RecyclerView.Adapter<out RecyclerView.ViewHolder>?>
@@ -88,9 +92,13 @@ class ListWeaponActivity : AppCompatActivity() {
         // RECYCLER VIEW STUFF
         recyclerView = findViewById<RecyclerView>(R.id.RecyclerView)
         layoutManager = GridLayoutManager(this, 3)
-        adapterWeapon = RecyclerAdapterWeapon()
+        adapterArtifact = RecyclerAdapterArtifact()
+        adapterCharacter = RecyclerAdapterCharacter()
+        adapterConsumable = RecyclerAdapterConsumable()
         adapterEnemy = RecyclerAdapterEnemy()
-        adapters = arrayOf(adapterWeapon, adapterWeapon, adapterWeapon, adapterWeapon, adapterWeapon, adapterEnemy)
+        adapterMaterial = RecyclerAdapterMaterial()
+        adapterWeapon = RecyclerAdapterWeapon()
+        adapters = arrayOf(adapterCharacter, adapterMaterial, adapterConsumable, adapterWeapon, adapterArtifact, adapterEnemy)
 
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapterEnemy
