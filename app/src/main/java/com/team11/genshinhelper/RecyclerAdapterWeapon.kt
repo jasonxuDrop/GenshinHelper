@@ -41,7 +41,7 @@ class RecyclerAdapterWeapon : RecyclerView.Adapter<RecyclerAdapterWeapon.ViewHol
         }
 ////        NOT APPLICABLE FOR WEAPONS
 //        if (holder.elementStubInflated == null){
-//            holder.elementStub.layoutResource = Common.elementLayout[Element.Geo.id] // TODO set star/rarity (ie. Electro element => Common.elementLayout[Common.Element.Electro.id])
+//            holder.elementStub.layoutResource = Element.Geo.layout // TODO set star/rarity (ie. Electro element => Element.Electro.layout)
 //            holder.elementStubInflated = holder.elementStub.inflate()
 //        }
         println("TODO populate with database data")

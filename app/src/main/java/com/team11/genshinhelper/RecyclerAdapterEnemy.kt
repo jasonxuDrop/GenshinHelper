@@ -8,59 +8,58 @@ import android.view.ViewStub
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.team11.genshinhelper.Common.*
 
 class RecyclerAdapterEnemy : RecyclerView.Adapter<RecyclerAdapterEnemy.ViewHolder>() {
 
-    // COMMON CARD ELEMENTS
-    private val backgroundImages = arrayOf(
-        R.drawable.card_background_1_star,
-        R.drawable.card_background_2_star,
-        R.drawable.card_background_3_star,
-        R.drawable.card_background_4_star,
-        R.drawable.card_background_5_star,
-    )
-    private val starLayout = arrayOf(
-        R.layout.card_stars_1,
-        R.layout.card_stars_2,
-        R.layout.card_stars_3,
-        R.layout.card_stars_4,
-        R.layout.card_stars_5,
-    )
-    private val elementLayout = arrayOf(
-        R.layout.card_element_anemo,
-        R.layout.card_element_cryo,
-        R.layout.card_element_dendro,
-        R.layout.card_element_electro,
-        R.layout.card_element_geo,
-        R.layout.card_element_hydro,
-        R.layout.card_element_pyro,
-    )
-
+    enum class EnemyType(val text : String) {
+        WeeklyBoss (
+            "Weekly Boss",
+                ),
+        NormalBoss (
+            "Normal Boss",
+                ),
+        Elite (
+            "Elite",
+                ),
+        Common (
+            "Common",
+                ),
+        Wildlife (
+            "Wildlife",
+                ),
+    }
     // PLACEHOLDER VALUES
-    private var titles = arrayOf(
-        "Sword1",
-        "Sword2",
-        "Sword3",
-        "Sword4",
+    private val titles = arrayOf(
+        "enmey 1",
+        "enmey 22",
+        "enmey 3",
+        "enmey 4",
         "Sword5",
-        "Sword6",
-        "Sword7",
+        "enmey 6",
+        "enmey 7",
         "Sword8",
-        "Sword9isalongword",
-        "Sword10 and extra words",
+        "enmey 9",
+        "enmey 10",
+        "Sword 11",
+        "enmey 12",
+        "enmey 13",
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapterEnemy.ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.card_template_weapon, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.card_template_enemy, parent, false)
         return ViewHolder(v)
     }
 
     override fun onBindViewHolder(holder: RecyclerAdapterEnemy.ViewHolder, position: Int) {
-        holder.title.text = titles[position]
-        holder.imageBackground.setImageResource(backgroundImages[position%5])
-        holder.image.setImageResource(R.drawable.example_weapon_polar_star)
-        holder.starStub.layoutResource = starLayout[position%5]//[]3-1]
-        val starViewInflated: View = holder.starStub.inflate()
+        holder.title.text = titles[position] // TODO set item name
+        holder.subtitle.text = EnemyType.Elite.text // TODO set enemy type (replace "Elite" with WeeklyBoss, NormalBoss, Common or Wildlife)
+        holder.image.setImageResource(R.drawable.example_enemy_pyro_abyss_mage_icon) // TODO set item image
+        holder.imageBackground.setImageResource(Common.backgroundImages[position%5]) // TODO set star/rarity background (ie. 3 star item => Common.backgroundImages[3-1])
+        if (holder.elementStubInflated == null){
+            holder.elementStub.layoutResource = Element.Geo.layout // TODO set star/rarity (ie. Electro element => Element.Electro.layout)
+            holder.elementStubInflated = holder.elementStub.inflate()
+        }
         println("TODO populate with database data")
     }
 
@@ -71,22 +70,19 @@ class RecyclerAdapterEnemy : RecyclerView.Adapter<RecyclerAdapterEnemy.ViewHolde
 
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        var image: ImageView
-        var imageBackground: ImageView
-        var title : TextView
-        var star1 : ImageView
-        var starStub : ViewStub
-
+        var title : TextView = itemView.findViewById(R.id.CardTitle)
+        var subtitle : TextView = itemView.findViewById(R.id.CardSubtitle)
+        var image: ImageView = itemView.findViewById(R.id.CardItem)
+        var imageBackground: ImageView = itemView.findViewById(R.id.CardImageBackground)
+        var elementStub : ViewStub = itemView.findViewById(R.id.CardElementStub)
+        var elementStubInflated : View? = null
+////        NOT APPLICABLE
+//        var starStub : ViewStub = itemView.findViewById(R.id.CardStarsStub)
+//        var starStubInflated : View? = null
 
         init {
-            image = itemView.findViewById(R.id.CardItem)
-            imageBackground = itemView.findViewById(R.id.CardImageBackground)
-            title = itemView.findViewById(R.id.CardTitle)
-            star1 = itemView.findViewById(R.id.CardRarityStar1)
-            starStub = itemView.findViewById(R.id.CardStarsStub)
-
             itemView.setOnClickListener{
-                val intent = Intent(itemView.context, DetailCharacterActivity::class.java)
+                val intent = Intent(itemView.context, DetailEnemyActivity::class.java)
                 intent.putExtra("itemName", title.text)
 
                 itemView.context.startActivity(intent)

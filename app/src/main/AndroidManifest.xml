@@ -16,6 +16,9 @@
             android:name=".DetailCharacterActivity"
             android:exported="false" />
         <activity
+            android:name=".DetailEnemyActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListCharacterActivity"
             android:exported="false" />
         <activity
