@@ -16,6 +16,9 @@
             android:name=".DetailCharacterActivity"
             android:exported="false" />
         <activity
+            android:name=".DetailEnemyActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListCharacterActivity"
             android:exported="false" />
         <activity
@@ -32,6 +35,9 @@
             android:exported="false" />
         <activity
             android:name=".ListWeaponActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListActivityMain"
             android:exported="true" />
         <activity
             android:name=".ResinTimerEditActivity"

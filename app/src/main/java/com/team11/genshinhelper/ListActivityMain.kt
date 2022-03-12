@@ -9,7 +9,7 @@ import android.widget.*
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class ListWeaponActivity : AppCompatActivity() {
+class ListActivityMain : AppCompatActivity() {
 
     private var layoutManager: RecyclerView.LayoutManager? = null
     private var adapterArtifact: RecyclerView.Adapter<RecyclerAdapterArtifact.ViewHolder>? = null

@@ -33,17 +33,17 @@
             android:layout_height="match_parent">
 
             <include
-                layout="@layout/card_template_artifact"
+                layout="@layout/card_template_artifact_old"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/card_template_artifact"
+                layout="@layout/card_template_artifact_old"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/card_template_artifact"
+                layout="@layout/card_template_artifact_old"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -54,17 +54,17 @@
             android:layout_height="match_parent">
 
             <include
-                layout="@layout/card_template_artifact"
+                layout="@layout/card_template_artifact_old"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/card_template_artifact"
+                layout="@layout/card_template_artifact_old"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/card_template_artifact"
+                layout="@layout/card_template_artifact_old"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -76,17 +76,17 @@
             android:layout_height="match_parent">
 
             <include
-                layout="@layout/card_template_artifact"
+                layout="@layout/card_template_artifact_old"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/card_template_artifact"
+                layout="@layout/card_template_artifact_old"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <include
-                layout="@layout/card_template_artifact"
+                layout="@layout/card_template_artifact_old"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

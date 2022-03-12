@@ -28,7 +28,7 @@ class ResinTimerActivity : AppCompatActivity() {
             startActivity(intent)
         }
         findViewById<ImageButton>(R.id.SearchNav).setOnClickListener{
-            val intent = Intent(this, ListCharacterActivity::class.java)
+            val intent = Intent(this, ListActivityMain::class.java)
             startActivity(intent)
         }
 

@@ -48,7 +48,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/example_enemy_cryo_hypostasis_icon" />
+                app:srcCompat="@drawable/example_item_prithiva_topaz_gemstone" />
 
             <ImageView
                 android:id="@+id/CardImageBackground"
@@ -74,7 +74,7 @@
                 android:id="@+id/CardTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cube"
+                android:text="Material Name"
                 android:textAlignment="center"
                 android:textColor="@color/black" />
 
@@ -82,15 +82,9 @@
                 android:id="@+id/CardSubtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Type"
+                android:text="Other Info"
                 android:textAlignment="center"
                 android:textColor="#929091" />
-
-            <ViewStub
-                android:id="@+id/CardElementStub"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0"/>
 
         </LinearLayout>
 
