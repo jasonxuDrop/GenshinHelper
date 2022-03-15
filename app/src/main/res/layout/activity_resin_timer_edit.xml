@@ -57,7 +57,7 @@
                 android:ems="10"
                 android:hint=""
                 android:inputType="number"
-                android:text="123"
+                android:text=""
                 android:textColor="#D7D0C6"
                 android:textSize="20sp"
                 app:backgroundTint="#D7D0C6" />
