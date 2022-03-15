@@ -13,6 +13,8 @@ import android.widget.EditText
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 
+
+
 class ResinTimerEditActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,11 +35,18 @@ class ResinTimerEditActivity : AppCompatActivity() {
 //        TODO: use `resinInput.text.toString().toInt() for getting the value the user put in
 
         findViewById<Button>(R.id.SaveButton).setOnClickListener{
-            val intent = Intent(this, ResinTimerActivity::class.java)
-            startActivity(intent)
+            saveText()
         }
     }
 
+    fun saveText(){
+        val resinInput = findViewById<EditText>(R.id.ResinInput)
+        val textToPass = resinInput.text.toString()
+
+        val intent = Intent(this, ResinTimerActivity::class.java)
+        intent.putExtra("SOME_KEY", textToPass)
+        startActivity(intent)
+    }
     class ResinEditTextWatcher: TextWatcher {
         override fun afterTextChanged(p0: Editable?) {
             if (p0 != null && p0.isNotEmpty()) {

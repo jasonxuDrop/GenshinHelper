@@ -9,8 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import org.w3c.dom.Text
 
 class ResinTimerActivity : AppCompatActivity() {
 
@@ -22,6 +24,7 @@ class ResinTimerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_resin_timer)
 
         val door = 3
+        val resinAmmount = findViewById<TextView>(R.id.textView2)
 
         findViewById<ImageButton>(R.id.EditButton).setOnClickListener{
             val intent = Intent(this, ResinTimerEditActivity::class.java)
@@ -32,13 +35,19 @@ class ResinTimerActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val textToDisplay = intent.getStringExtra("SOME_KEY")
+        resinAmmount.text = textToDisplay
+
         createNotificationChannel()
 
         val btn_button = findViewById<ImageButton>(R.id.btn_button)
         btn_button.setOnClickListener{
             sendNotification()
         }
-    }
+
+
+
+}
 
     private fun createNotificationChannel(){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
@@ -64,6 +73,5 @@ class ResinTimerActivity : AppCompatActivity() {
             notify(notificationId, builder.build())
         }
     }
-
 
 }
