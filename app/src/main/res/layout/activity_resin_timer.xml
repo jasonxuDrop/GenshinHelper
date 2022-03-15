@@ -37,14 +37,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/resinText"
         android:layout_width="153dp"
         android:layout_height="24dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/genshin"
+        android:gravity="left"
+        android:text="Resin: "
+        android:textColor="#D7D0C6"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="46dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/genshin"
         android:gravity="center"
-        android:text="Resin: 125/160"
+        android:text=""
         android:textColor="#D7D0C6"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
