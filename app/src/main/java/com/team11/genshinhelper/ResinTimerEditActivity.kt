@@ -21,7 +21,7 @@ class ResinTimerEditActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resin_timer_edit)
 
-        val resinInput = findViewById<EditText>(R.id.ResinInput)
+        var resinInput = findViewById<EditText>(R.id.ResinInput)
 
         resinInput.addTextChangedListener(ResinEditTextWatcher())
         findViewById<Button>(R.id.Add5Button ).setOnClickListener(ResinEditButtonListener(  5, resinInput.text))
@@ -34,16 +34,19 @@ class ResinTimerEditActivity : AppCompatActivity() {
 //        TODO: use `resinInput.setText("68")` to edit the current resin amount when page opens
 //        TODO: use `resinInput.text.toString().toInt() for getting the value the user put in
 
+        val textToDisplay2 = intent.getStringExtra("SOME_KEY2")
+        resinInput?.setText(textToDisplay2)
+
         findViewById<Button>(R.id.SaveButton).setOnClickListener{
             saveText()
         }
     }
 
     fun saveText(){
-        val resinInput = findViewById<EditText>(R.id.ResinInput)
-        val textToPass = resinInput.text.toString()
+        var resinInput = findViewById<EditText>(R.id.ResinInput)
+        var textToPass = resinInput.text.toString()
 
-        val intent = Intent(this, ResinTimerActivity::class.java)
+        var intent = Intent(this, ResinTimerActivity::class.java)
         intent.putExtra("SOME_KEY", textToPass)
         startActivity(intent)
     }
