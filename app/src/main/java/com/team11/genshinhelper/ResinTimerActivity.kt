@@ -4,6 +4,7 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
+import android.icu.util.CurrencyAmount
 import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -12,7 +13,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import org.w3c.dom.Text
+import java.time.temporal.Temporal
 import java.util.concurrent.TimeUnit
 
 class ResinTimerActivity : AppCompatActivity() {
@@ -20,14 +21,14 @@ class ResinTimerActivity : AppCompatActivity() {
     private val CHANNEL_ID = "channel_id_example_01"
     private val notificationId = 101
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resin_timer)
 
         val door = 3
         val resinAmmount = findViewById<TextView>(R.id.textView2)
-        val resinTimer = findViewById<TextView>(R.id.textView3)
-        val resinFormula = resinAmmount
+
 
         findViewById<ImageButton>(R.id.EditButton).setOnClickListener{
             val intent = Intent(this, ResinTimerEditActivity::class.java)
@@ -63,8 +64,18 @@ class ResinTimerActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    fun conversionForTimer(): Long {
+        var resinAmmount = findViewById<TextView>(R.id.textView2)
+        var converted = Integer.parseInt(resinAmmount.getText().toString());
+
+        val convertedNum = ((160 - converted) * 8) * 60000
+
+        return convertedNum.toLong()
+    }
+
    fun countDown() {
-        val countDownTimer = object : CountDownTimer(1584700200, 1000) {
+
+       val countDownTimer = object : CountDownTimer(65000000.toLong(), 1000) {
             var resinTimer = findViewById<TextView>(R.id.textView3)
 
             override fun onTick(p0: Long) {
