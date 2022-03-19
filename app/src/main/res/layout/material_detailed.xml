@@ -33,7 +33,7 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/materialSourceDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"
@@ -42,7 +42,7 @@
         android:textColor="#FFFFFF" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/materialRarity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"
@@ -58,33 +58,67 @@
         android:paddingLeft="30dp">
 
         <ImageView
-            android:id="@+id/imageView29"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
+            android:id="@+id/materialStar1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             app:srcCompat="@drawable/card_star" />
 
         <ImageView
-            android:id="@+id/imageView30"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
+            android:id="@+id/materialStar2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             app:srcCompat="@drawable/card_star" />
 
         <ImageView
-            android:id="@+id/imageView31"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
+            android:id="@+id/materialStar3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             app:srcCompat="@drawable/card_star" />
 
         <ImageView
-            android:id="@+id/imageView32"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
+            android:id="@+id/materialStar4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             app:srcCompat="@drawable/card_star" />
 
         <ImageView
-            android:id="@+id/imageView33"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
+            android:id="@+id/materialStar5"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             app:srcCompat="@drawable/card_star" />
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="414dp"
+        android:layout_height="59dp"
+        android:background="#1C1C1E"
+        android:translationY="-59dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/ResinNav"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:text="Resin"
+            android:translationX="10dp"
+            android:translationY="5dp"
+            app:srcCompat="@drawable/resin_button" />
+
+        <ImageButton
+            android:id="@+id/SearchNav"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:text="Search"
+            android:translationX="265dp"
+            android:translationY="5dp"
+            app:srcCompat="@drawable/search_button" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 </LinearLayout>

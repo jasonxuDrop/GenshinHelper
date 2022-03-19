@@ -8,14 +8,14 @@
     android:orientation="vertical" >
 
     <ImageView
-        android:id="@+id/materialImage"
+        android:id="@+id/consumableImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/card_background"
         app:srcCompat="@drawable/example_item_crab_ham_veggie_bake" />
 
     <TextView
-        android:id="@+id/materialName"
+        android:id="@+id/consumableName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Crab, Ham, and Veggie Bake"
@@ -30,7 +30,7 @@
         android:paddingTop="30dp">
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/consumableRarity"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:paddingLeft="30dp"
@@ -40,27 +40,27 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="24dp"
+            android:layout_height="31dp"
             android:orientation="horizontal"
             android:paddingLeft="100dp"
             android:paddingTop="10dp">
 
             <ImageView
-                android:id="@+id/imageView29"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:id="@+id/consumableStar1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 app:srcCompat="@drawable/card_star" />
 
             <ImageView
-                android:id="@+id/imageView30"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:id="@+id/consumableStar2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 app:srcCompat="@drawable/card_star" />
 
             <ImageView
-                android:id="@+id/imageView31"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:id="@+id/consumableStar3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 app:srcCompat="@drawable/card_star" />
 
         </LinearLayout>
@@ -73,7 +73,7 @@
         android:paddingTop="30dp">
 
         <TextView
-            android:id="@+id/textView23"
+            android:id="@+id/consumableType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="30dp"
@@ -82,7 +82,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/consumableTypeDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="N/A"
@@ -98,7 +98,7 @@
         android:paddingTop="20dp">
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/consumableEffect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Effect"
@@ -107,7 +107,7 @@
             tools:paddingLeft="30dp" />
 
         <TextView
-            android:id="@+id/textView24"
+            android:id="@+id/consumableEffectDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="100dp"
@@ -123,7 +123,7 @@
         android:paddingTop="20dp">
 
         <TextView
-            android:id="@+id/textView25"
+            android:id="@+id/consumableRecipe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="30dp"
@@ -132,7 +132,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView26"
+            android:id="@+id/consumableRecipeDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="95dp"
@@ -148,7 +148,7 @@
         android:paddingTop="20dp">
 
         <TextView
-            android:id="@+id/textView27"
+            android:id="@+id/consumableProficiency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="30dp"
@@ -157,7 +157,7 @@
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/textView28"
+            android:id="@+id/consumableProficiencyDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="40dp"
@@ -165,5 +165,38 @@
             android:textSize="20sp"
             tools:textColor="#FFFFFF" />
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="414dp"
+        android:layout_height="59dp"
+        android:background="#1C1C1E"
+        android:translationY="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/ResinNav"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:text="Resin"
+            android:translationX="10dp"
+            android:translationY="5dp"
+            app:srcCompat="@drawable/resin_button" />
+
+        <ImageButton
+            android:id="@+id/SearchNav"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:text="Search"
+            android:translationX="265dp"
+            android:translationY="5dp"
+            app:srcCompat="@drawable/search_button" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </LinearLayout>

@@ -8,14 +8,14 @@
     android:orientation="vertical" >
 
     <ImageView
-        android:id="@+id/materialImage"
+        android:id="@+id/artifactImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/card_background"
         app:srcCompat="@drawable/example_item_maidens_distant_love" />
 
     <TextView
-        android:id="@+id/materialName"
+        android:id="@+id/artifactName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Maiden's Beloved"
@@ -30,7 +30,7 @@
         android:paddingTop="30dp">
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/artifactRarity"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:paddingLeft="30dp"
@@ -40,39 +40,39 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="24dp"
+            android:layout_height="29dp"
             android:orientation="horizontal"
             android:paddingLeft="100dp"
             android:paddingTop="10dp">
 
             <ImageView
-                android:id="@+id/imageView29"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:id="@+id/artifactStar1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 app:srcCompat="@drawable/card_star" />
 
             <ImageView
-                android:id="@+id/imageView30"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:id="@+id/artifactStar2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 app:srcCompat="@drawable/card_star" />
 
             <ImageView
-                android:id="@+id/imageView31"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:id="@+id/artifactStar3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 app:srcCompat="@drawable/card_star" />
 
             <ImageView
-                android:id="@+id/imageView15"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:id="@+id/artifactStar4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 app:srcCompat="@drawable/card_star" />
 
             <ImageView
-                android:id="@+id/imageView16"
-                android:layout_width="10dp"
-                android:layout_height="10dp"
+                android:id="@+id/artifactStar5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 app:srcCompat="@drawable/card_star" />
 
         </LinearLayout>
@@ -85,7 +85,7 @@
         android:paddingTop="30dp">
 
         <TextView
-            android:id="@+id/textView23"
+            android:id="@+id/artifact2Piece"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="30dp"
@@ -94,7 +94,7 @@
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/textView22"
+            android:id="@+id/artifact2PieceDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Character healing effectiveness +15%"
@@ -110,7 +110,7 @@
         android:paddingTop="18dp">
 
         <TextView
-            android:id="@+id/textView21"
+            android:id="@+id/artifact4Piece"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4-Piece Bonus"
@@ -119,7 +119,7 @@
             tools:paddingLeft="30dp" />
 
         <TextView
-            android:id="@+id/textView24"
+            android:id="@+id/artifact4PieceDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="15dp"
@@ -127,5 +127,38 @@
             android:textSize="10sp"
             tools:textColor="#FFFFFF" />
     </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="414dp"
+        android:layout_height="59dp"
+        android:background="#1C1C1E"
+        android:translationY="207dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/ResinNav"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:text="Resin"
+            android:translationX="10dp"
+            android:translationY="5dp"
+            app:srcCompat="@drawable/resin_button" />
+
+        <ImageButton
+            android:id="@+id/SearchNav"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="8dp"
+            android:background="#00FFFFFF"
+            android:text="Search"
+            android:translationX="265dp"
+            android:translationY="5dp"
+            app:srcCompat="@drawable/search_button" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </LinearLayout>
