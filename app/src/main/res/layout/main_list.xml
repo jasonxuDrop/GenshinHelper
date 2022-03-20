@@ -18,22 +18,16 @@
 
     <Spinner
         android:id="@+id/spnOption"
-        android:layout_width="match_parent"
+        android:layout_width="260dp"
         android:layout_height="45dp"
-        android:layout_margin="20dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/spinner_bg"
+        android:dropDownVerticalOffset="48dp"
         android:spinnerMode="dropdown"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="20dp" />
-
-<!--    <TextView-->
-<!--        android:id="@+id/spnText"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="@+id/spnOption"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/spnOption"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/spnOption"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/spnOption" />-->
+        android:textColor="#D7D0C6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -53,6 +47,7 @@
 
 
     <LinearLayout
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="59dp"
         android:background="#1C1C1E"

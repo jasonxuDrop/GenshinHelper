@@ -8,6 +8,12 @@ import android.view.View
 import android.widget.*
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import android.view.ViewGroup
+
+import android.widget.ArrayAdapter
+
+
+
 
 class ListActivityMain : AppCompatActivity() {
 
@@ -36,15 +42,17 @@ class ListActivityMain : AppCompatActivity() {
         //result = findViewById<TextView>(R.id.spnText)
 
 
-        option.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, options)
+        option.setPopupBackgroundResource(R.drawable.spinner_bg_blue)
+        var spinnerDropdown = ArrayAdapter<String>(this, R.layout.spinner_item, options)
+        spinnerDropdown.setDropDownViewResource(R.layout.spinner_item_dropdown)
+        option.adapter = spinnerDropdown
 
         option.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                //result.text = options.get(position)
-                selectedAdapter = adapters[position]
-                recyclerView.adapter = selectedAdapter
-                Log.d("List Changed", "To " + options[position])
                 if (selectedAdapter != adapters[position]) {
+                    selectedAdapter = adapters[position]
+                    recyclerView.adapter = selectedAdapter
+                    Log.d("List Changed", "To " + options[position])
                 }
             }
 
