@@ -30,7 +30,7 @@ class ListActivityMain : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.weapon_list)
+        setContentView(R.layout.main_list)
 
         option = findViewById<Spinner>(R.id.spnOption)
         //result = findViewById<TextView>(R.id.spnText)
@@ -53,41 +53,10 @@ class ListActivityMain : AppCompatActivity() {
             }
         }
 
-        findViewById<ImageButton>(R.id.ResinNav).setOnClickListener{
+        findViewById<LinearLayout>(R.id.ResinNav).setOnClickListener{
             val intent = Intent(this, ResinTimerActivity::class.java)
             startActivity(intent)
         }
-
-//        findViewById<ImageButton>(R.id.SearchNav).setOnClickListener{
-//            //val intentStringValue: String = "List" + result.text + "Activity"
-//            if(result.text == "Characters") {
-//                val intent = Intent(this, ListCharacterActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else if(result.text == "Materials") {
-//                val intent = Intent(this, ListMaterialActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else if(result.text == "Consumables") {
-//                val intent = Intent(this, ListConsumableActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else if(result.text == "Weapons") {
-//                val intent = Intent(this, ListWeaponActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else if(result.text == "Artifacts") {
-//                val intent = Intent(this, ListArtifactActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else if(result.text == "Enemies") {
-//                val intent = Intent(this, ListEnemyActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else {
-//
-//            }
-//        }
 
         // RECYCLER VIEW STUFF
         recyclerView = findViewById<RecyclerView>(R.id.RecyclerView)

@@ -9,6 +9,7 @@ import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
@@ -36,7 +37,7 @@ class ResinTimerActivity : AppCompatActivity() {
             saveText2()
         }
 
-        findViewById<ImageButton>(R.id.SearchNav).setOnClickListener{
+        findViewById<LinearLayout>(R.id.SearchNav).setOnClickListener{
             val intent = Intent(this, ListActivityMain::class.java)
             startActivity(intent)
         }
