@@ -8,6 +8,12 @@ import android.view.View
 import android.widget.*
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import android.view.ViewGroup
+
+import android.widget.ArrayAdapter
+
+
+
 
 class ListActivityMain : AppCompatActivity() {
 
@@ -30,21 +36,23 @@ class ListActivityMain : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.weapon_list)
+        setContentView(R.layout.main_list)
 
         option = findViewById<Spinner>(R.id.spnOption)
         //result = findViewById<TextView>(R.id.spnText)
 
 
-        option.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, options)
+        option.setPopupBackgroundResource(R.drawable.spinner_bg_blue)
+        var spinnerDropdown = ArrayAdapter<String>(this, R.layout.spinner_item, options)
+        spinnerDropdown.setDropDownViewResource(R.layout.spinner_item_dropdown)
+        option.adapter = spinnerDropdown
 
         option.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                //result.text = options.get(position)
-                selectedAdapter = adapters[position]
-                recyclerView.adapter = selectedAdapter
-                Log.d("List Changed", "To " + options[position])
                 if (selectedAdapter != adapters[position]) {
+                    selectedAdapter = adapters[position]
+                    recyclerView.adapter = selectedAdapter
+                    Log.d("List Changed", "To " + options[position])
                 }
             }
 
@@ -53,41 +61,10 @@ class ListActivityMain : AppCompatActivity() {
             }
         }
 
-        findViewById<ImageButton>(R.id.ResinNav).setOnClickListener{
+        findViewById<LinearLayout>(R.id.ResinNav).setOnClickListener{
             val intent = Intent(this, ResinTimerActivity::class.java)
             startActivity(intent)
         }
-
-//        findViewById<ImageButton>(R.id.SearchNav).setOnClickListener{
-//            //val intentStringValue: String = "List" + result.text + "Activity"
-//            if(result.text == "Characters") {
-//                val intent = Intent(this, ListCharacterActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else if(result.text == "Materials") {
-//                val intent = Intent(this, ListMaterialActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else if(result.text == "Consumables") {
-//                val intent = Intent(this, ListConsumableActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else if(result.text == "Weapons") {
-//                val intent = Intent(this, ListWeaponActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else if(result.text == "Artifacts") {
-//                val intent = Intent(this, ListArtifactActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else if(result.text == "Enemies") {
-//                val intent = Intent(this, ListEnemyActivity::class.java)
-//                startActivity(intent)
-//            }
-//            else {
-//
-//            }
-//        }
 
         // RECYCLER VIEW STUFF
         recyclerView = findViewById<RecyclerView>(R.id.RecyclerView)
