@@ -8,6 +8,7 @@ import android.icu.util.CurrencyAmount
 import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -29,8 +30,9 @@ class ResinTimerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_resin_timer)
 
         val door = 3
-        resinAmmount = findViewById<TextView>(R.id.textView2)
-
+        resinAmmount = findViewById<TextView>(R.id.resinAmount)
+        resinAmmount.text = "22"
+        Log.d("test", resinAmmount.text.toString())
 
         findViewById<ImageButton>(R.id.EditButton).setOnClickListener{
             val intent = Intent(this, ResinTimerEditActivity::class.java)
@@ -44,7 +46,8 @@ class ResinTimerActivity : AppCompatActivity() {
         }
 
         val textToDisplay = intent.getStringExtra("SOME_KEY")
-        resinAmmount.text = textToDisplay
+        if (!textToDisplay.isNullOrEmpty())
+            resinAmmount.text = textToDisplay
 
         createNotificationChannel()
 
@@ -58,7 +61,7 @@ class ResinTimerActivity : AppCompatActivity() {
 }
 
     fun saveText2(){
-        var textView2 = findViewById<TextView>(R.id.textView2)
+        var textView2 = findViewById<TextView>(R.id.resinAmount)
         var textToPass2 = textView2.text.toString()
 
         var intent = Intent(this, ResinTimerEditActivity::class.java)
@@ -67,8 +70,8 @@ class ResinTimerActivity : AppCompatActivity() {
     }
 
     fun conversionForTimer(): Long {
-        var resinAmmount = findViewById<TextView>(R.id.textView2)
-        var converted = Integer.parseInt(resinAmmount.getText().toString());
+        Log.d("test", "resinAmmount.getText().toString() = " + resinAmmount.text.toString())
+        var converted = Integer.parseInt(resinAmmount.text.toString());
 
         val convertedNum = ((160 - converted) * 8) * 60000
 
