@@ -21,6 +21,7 @@ class ResinTimerActivity : AppCompatActivity() {
 
     private val CHANNEL_ID = "channel_id_example_01"
     private val notificationId = 101
+    lateinit var resinAmmount: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +29,7 @@ class ResinTimerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_resin_timer)
 
         val door = 3
-        val resinAmmount = findViewById<TextView>(R.id.textView2)
+        resinAmmount = findViewById<TextView>(R.id.textView2)
 
 
         findViewById<ImageButton>(R.id.EditButton).setOnClickListener{
@@ -76,7 +77,7 @@ class ResinTimerActivity : AppCompatActivity() {
 
    fun countDown() {
 
-       val countDownTimer = object : CountDownTimer(65000000.toLong(), 1000) {
+       val countDownTimer = object : CountDownTimer(conversionForTimer(), 1000) {
             var resinTimer = findViewById<TextView>(R.id.textView3)
 
             override fun onTick(p0: Long) {
