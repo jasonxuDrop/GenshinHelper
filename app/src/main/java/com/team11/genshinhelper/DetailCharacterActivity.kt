@@ -13,7 +13,7 @@ class DetailCharacterActivity : AppCompatActivity() {
         var itemName = intent.getStringExtra("itemName")
 
 
-        findViewById<TextView>(R.id.Title).text = itemName
+        findViewById<TextView>(R.id.characterName).text = itemName
 
     }
 }
