@@ -4,18 +4,17 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
-import android.icu.util.CurrencyAmount
 import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
+import android.view.View
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import java.time.temporal.Temporal
 import java.util.concurrent.TimeUnit
 
 class ResinTimerActivity : AppCompatActivity() {
@@ -23,6 +22,8 @@ class ResinTimerActivity : AppCompatActivity() {
     private val CHANNEL_ID = "channel_id_example_01"
     private val notificationId = 101
     lateinit var resinAmmount: TextView
+    lateinit var notificatonButton: ImageButton
+    var setNotification = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +33,7 @@ class ResinTimerActivity : AppCompatActivity() {
         val door = 3
         resinAmmount = findViewById<TextView>(R.id.resinAmount)
         resinAmmount.text = "22"
+        notificatonButton = findViewById<ImageButton>(R.id.btn_button)
         Log.d("test", resinAmmount.text.toString())
 
         findViewById<ImageButton>(R.id.EditButton).setOnClickListener{
@@ -52,8 +54,16 @@ class ResinTimerActivity : AppCompatActivity() {
         createNotificationChannel()
 
         val btn_button = findViewById<ImageButton>(R.id.btn_button)
-        btn_button.setOnClickListener{
-            sendNotification()
+        btn_button.setOnClickListener(){
+            var isChecked = true
+            if (isChecked == true) {
+                setNotification = true
+                notificatonButton.setImageResource(R.drawable.button_notification_on)
+            }
+            else {
+                notificatonButton.setImageResource(R.drawable.button_notification_off)
+                setNotification = false
+            }
         }
 
         countDown()
@@ -106,8 +116,11 @@ class ResinTimerActivity : AppCompatActivity() {
 
             override fun onFinish() {
                 /*clearing all fields and displaying countdown finished message          */
-                resinTimer.setText("Count down completed");
-                System.out.println("Time up")
+                resinTimer.setText("RESIN");
+                System.out.println("Available")
+                if (setNotification == true) {
+                    sendNotification()
+                }
             }
         }
         countDownTimer.start()
