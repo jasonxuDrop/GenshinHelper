@@ -5,6 +5,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.*
 import android.content.Intent
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class ListCharacterActivity : AppCompatActivity() {
 
@@ -14,7 +19,6 @@ class ListCharacterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.character_list)
-
 
         option = findViewById(R.id.spnOption) as Spinner
         result = findViewById(R.id.spnText) as TextView

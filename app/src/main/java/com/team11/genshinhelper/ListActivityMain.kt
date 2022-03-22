@@ -8,6 +8,11 @@ import android.view.View
 import android.widget.*
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 class ListActivityMain : AppCompatActivity() {
 
@@ -35,8 +40,38 @@ class ListActivityMain : AppCompatActivity() {
         option = findViewById<Spinner>(R.id.spnOption)
         //result = findViewById<TextView>(R.id.spnText)
 
+        var rf = Retrofit.Builder()
+            .baseUrl(RetrofitInterface.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create()).build()
 
-        option.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, options)
+        var API = rf.create(RetrofitInterface::class.java)
+        var call = API.posts
+
+        call?.enqueue(object: Callback<List<PostModel?>?> {
+            override fun onFailure(call: Call<List<PostModel?>?>, t: Throwable) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onResponse(
+                call: Call<List<PostModel?>?>,
+                response: Response<List<PostModel?>?>
+            ) {
+                var postlist : List<PostModel>? = response.body() as List<PostModel>
+                var post = arrayOfNulls<String>(postlist!!.size)
+
+                for(i in postlist!!.indices)
+                    //pull titles from PostModel Query from RetrofitInterface.kt
+                    post[i] = postlist!![i]!!.title
+
+                var adapter = ArrayAdapter<String>(applicationContext, android.R.layout.simple_dropdown_item_1line, post)
+                //adapter stores value of API location query from RetrofitInterface.kt, data variables pulled are declared in PostModel.kt
+
+                //simple testing purposes, enabling this will load the PostModel data into the option adapter drop list (pulling and displaying from placeholder is working)
+                option.adapter = adapter
+            }
+        })
+
+       //option.adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, options)
 
         option.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
