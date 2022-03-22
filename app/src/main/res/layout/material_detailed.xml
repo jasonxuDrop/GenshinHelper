@@ -38,15 +38,23 @@
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"
         android:paddingTop="10dp"
+        android:paddingRight="30dp"
         android:text="Dropped by Normal Bosses and Weekly Bosses"
         android:textColor="#FFFFFF" />
+
+    <ImageView
+        android:id="@+id/lineDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        app:srcCompat="@drawable/line_divider" />
 
     <TextView
         android:id="@+id/materialRarity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="30dp"
-        android:paddingTop="50dp"
+        android:paddingTop="30dp"
         android:text="Rarity"
         android:textColor="#FFFFFF"
         android:textSize="20sp" />
