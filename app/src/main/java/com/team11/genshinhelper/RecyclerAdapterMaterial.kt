@@ -56,7 +56,7 @@ class RecyclerAdapterMaterial : RecyclerView.Adapter<RecyclerAdapterMaterial.Vie
 
         init {
             itemView.setOnClickListener{
-                val intent = Intent(itemView.context, DetailEnemyActivity::class.java)
+                val intent = Intent(itemView.context, DetailMaterialActivity::class.java)
                 intent.putExtra("itemName", title.text)
 
                 itemView.context.startActivity(intent)

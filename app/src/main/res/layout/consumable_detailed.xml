@@ -1,231 +1,282 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
-    android:orientation="vertical" >
-
-    <ImageView
-        android:id="@+id/consumableImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/card_background"
-        app:srcCompat="@drawable/example_item_crab_ham_veggie_bake" />
-
-    <TextView
-        android:id="@+id/consumableName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Crab, Ham, and Veggie Bake"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+    android:background="@drawable/background_gradient">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:paddingTop="30dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/consumableImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card_background"
+            app:srcCompat="@drawable/example_item_crab_ham_veggie_bake" />
 
         <TextView
-            android:id="@+id/consumableRarity"
-            android:layout_width="100dp"
+            android:id="@+id/consumableName"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
-            android:text="Rarity"
+            android:text="Crab, Ham, and Veggie Bake"
+            android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="31dp"
+            android:layout_height="60dp"
             android:orientation="horizontal"
-            android:paddingLeft="100dp"
-            android:paddingTop="10dp">
+            android:paddingTop="30dp">
 
-            <ImageView
-                android:id="@+id/consumableStar1"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:srcCompat="@drawable/card_star" />
+            <TextView
+                android:id="@+id/consumableRarity"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:text="Rarity"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
 
-            <ImageView
-                android:id="@+id/consumableStar2"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:srcCompat="@drawable/card_star" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="31dp"
+                android:orientation="horizontal"
+                android:paddingLeft="100dp"
+                android:paddingTop="10dp">
 
-            <ImageView
-                android:id="@+id/consumableStar3"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:srcCompat="@drawable/card_star" />
+                <ImageView
+                    android:id="@+id/consumableStar1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/card_star" />
 
+                <ImageView
+                    android:id="@+id/consumableStar2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/card_star" />
+
+                <ImageView
+                    android:id="@+id/consumableStar3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    app:srcCompat="@drawable/card_star" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/line_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:id="@+id/consumableType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:text="Type"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/consumableTypeDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="20sp"
+                tools:paddingLeft="120dp"
+                tools:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/line_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/consumableEffect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Effect"
+                android:textColor="#FBFBFB"
+                android:textSize="20sp"
+                tools:paddingLeft="30dp" />
+
+            <TextView
+                android:id="@+id/consumableEffectDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="100dp"
+                android:paddingRight="30dp"
+                android:text="Revives a character and restores 1,200 HP"
+                android:textSize="12sp"
+                tools:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/line_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/consumableRecipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:text="Recipe"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/consumableRecipeDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="95dp"
+                android:text="N/A"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/line_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/consumableProficiency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:text="Proficiency"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/consumableProficiencyDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="40dp"
+                android:text="N/A"
+                android:textSize="20sp"
+                tools:textColor="#FFFFFF" />
         </LinearLayout>
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        app:srcCompat="@drawable/line_divider" />
-
     <LinearLayout
+        android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:paddingTop="30dp">
-
-        <TextView
-            android:id="@+id/consumableType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
-            android:text="Type"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/consumableTypeDetail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="N/A"
-            android:textSize="20sp"
-            tools:paddingLeft="120dp"
-            tools:textColor="#FFFFFF" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        app:srcCompat="@drawable/line_divider" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:paddingTop="20dp">
-
-        <TextView
-            android:id="@+id/consumableEffect"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Effect"
-            android:textColor="#FBFBFB"
-            android:textSize="20sp"
-            tools:paddingLeft="30dp" />
-
-        <TextView
-            android:id="@+id/consumableEffectDetail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="100dp"
-            android:paddingRight="30dp"
-            android:text="Revives a character and restores 1,200 HP"
-            android:textSize="12sp"
-            tools:textColor="#FFFFFF" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        app:srcCompat="@drawable/line_divider" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:paddingTop="20dp">
-
-        <TextView
-            android:id="@+id/consumableRecipe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
-            android:text="Recipe"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/consumableRecipeDetail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="95dp"
-            android:text="N/A"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        app:srcCompat="@drawable/line_divider" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:paddingTop="20dp">
-
-        <TextView
-            android:id="@+id/consumableProficiency"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
-            android:text="Proficiency"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/consumableProficiencyDetail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="40dp"
-            android:text="N/A"
-            android:textSize="20sp"
-            tools:textColor="#FFFFFF" />
-    </LinearLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="414dp"
         android:layout_height="59dp"
         android:background="#1C1C1E"
-        android:translationY="46dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageButton
+        <LinearLayout
             android:id="@+id/ResinNav"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="8dp"
-            android:background="#00FFFFFF"
-            android:text="Resin"
-            android:translationX="10dp"
-            android:translationY="5dp"
-            app:srcCompat="@drawable/resin_button" />
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_secondary_dark_default"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="6dp">
 
-        <ImageButton
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingStart="12dp"
+                android:paddingBottom="2dp"
+                app:srcCompat="@drawable/icon_resin_svg" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:text="Resin"
+                android:textColor="#D7D0C6"
+                android:textSize="20sp"
+                android:translationY="-2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/SearchNav"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="8dp"
-            android:background="#00FFFFFF"
-            android:text="Search"
-            android:translationX="265dp"
-            android:translationY="5dp"
-            app:srcCompat="@drawable/search_button" />
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_secondary_pressed"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="6dp">
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-</LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingStart="12dp"
+                android:paddingBottom="2dp"
+                app:srcCompat="@drawable/icon_search_svg_pressed" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:text="Search"
+                android:textColor="#1C1C1E"
+                android:textSize="20sp"
+                android:translationY="-2dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

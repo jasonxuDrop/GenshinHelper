@@ -62,7 +62,7 @@ class RecyclerAdapterArtifact : RecyclerView.Adapter<RecyclerAdapterArtifact.Vie
 
         init {
             itemView.setOnClickListener{
-                val intent = Intent(itemView.context, DetailEnemyActivity::class.java) // TODO open the right activity
+                val intent = Intent(itemView.context, DetailArtifactActivity::class.java)
                 intent.putExtra("itemName", title.text)
 
                 itemView.context.startActivity(intent)

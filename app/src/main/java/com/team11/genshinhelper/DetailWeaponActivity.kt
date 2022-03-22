@@ -6,6 +6,6 @@ import android.os.Bundle
 class DetailWeaponActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // TODO setContentView(R.layout.weapon_detailed)
+        setContentView(R.layout.weapon_detailed)
     }
 }
