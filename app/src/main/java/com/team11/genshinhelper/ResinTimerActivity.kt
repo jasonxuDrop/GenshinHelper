@@ -8,7 +8,6 @@ import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
-import android.view.View
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -24,6 +23,7 @@ class ResinTimerActivity : AppCompatActivity() {
     lateinit var resinAmmount: TextView
     lateinit var notificatonButton: ImageButton
     var setNotification = false
+    var doSendNotification = true // TODO save this notification on/off bool && load the value in on create instead of defaulting to true
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,8 +32,7 @@ class ResinTimerActivity : AppCompatActivity() {
 
         val door = 3
         resinAmmount = findViewById<TextView>(R.id.resinAmount)
-        resinAmmount.text = "22"
-        notificatonButton = findViewById<ImageButton>(R.id.btn_button)
+        resinAmmount.text = "22"                                                        // TODO load resinAmmount value from save
         Log.d("test", resinAmmount.text.toString())
 
         findViewById<ImageButton>(R.id.EditButton).setOnClickListener{
@@ -53,14 +52,15 @@ class ResinTimerActivity : AppCompatActivity() {
 
         createNotificationChannel()
 
-        val btn_button = findViewById<ImageButton>(R.id.btn_button)
-        btn_button.setOnClickListener(){
-            var isChecked = true
-            if (isChecked == true) {
+        notificatonButton = findViewById(R.id.btn_button)
+        notificatonButton.setOnClickListener(){
+            if (doSendNotification) {
+                doSendNotification = false
                 setNotification = true
                 notificatonButton.setImageResource(R.drawable.button_notification_on)
             }
             else {
+                doSendNotification = true
                 notificatonButton.setImageResource(R.drawable.button_notification_off)
                 setNotification = false
             }
