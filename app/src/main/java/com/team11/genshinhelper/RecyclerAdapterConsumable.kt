@@ -62,7 +62,7 @@ class RecyclerAdapterConsumable : RecyclerView.Adapter<RecyclerAdapterConsumable
 
         init {
             itemView.setOnClickListener{
-                val intent = Intent(itemView.context, DetailEnemyActivity::class.java) // TODO open the right activity
+                val intent = Intent(itemView.context, DetailConsumableActivity::class.java)
                 intent.putExtra("itemName", title.text)
 
                 itemView.context.startActivity(intent)

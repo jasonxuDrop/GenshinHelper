@@ -10,13 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GenshinHelper">
         <activity
-            android:name=".DetailWeaponActivity"
+            android:name=".DetailArtifactActivity"
             android:exported="false" />
         <activity
             android:name=".DetailCharacterActivity"
             android:exported="false" />
         <activity
+            android:name=".DetailConsumableActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailEnemyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailMaterialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailWeaponActivity"
             android:exported="false" />
         <activity
             android:name=".ListCharacterActivity"

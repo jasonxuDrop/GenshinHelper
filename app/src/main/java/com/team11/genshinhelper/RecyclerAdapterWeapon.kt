@@ -66,7 +66,7 @@ class RecyclerAdapterWeapon : RecyclerView.Adapter<RecyclerAdapterWeapon.ViewHol
 
         init {
             itemView.setOnClickListener{
-                val intent = Intent(itemView.context, DetailCharacterActivity::class.java)
+                val intent = Intent(itemView.context, DetailWeaponActivity::class.java)
                 intent.putExtra("itemName", title.text)
 
                 itemView.context.startActivity(intent)

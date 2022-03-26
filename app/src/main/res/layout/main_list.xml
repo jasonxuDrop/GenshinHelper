@@ -6,101 +6,45 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/action_bar" />
+
+    <Spinner
+        android:id="@+id/spnOption"
+        android:layout_width="260dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/spinner_bg"
+        android:dropDownVerticalOffset="48dp"
+        android:spinnerMode="dropdown"
+        android:textColor="#D7D0C6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:isScrollContainer="false"
+        android:scrollIndicators="right"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbarThumbVertical="@drawable/scroll_bar_flex2"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-        <ImageView
-            android:id="@+id/materialImage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/card_background"
-            app:srcCompat="@drawable/example_item_prithiva_topaz_gemstone" />
-
-        <TextView
-            android:id="@+id/materialName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Prithiva Topaz Gemstone"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/materialSource"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
-            android:paddingTop="50dp"
-            android:text="Source"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/materialSourceDetail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
-            android:paddingTop="10dp"
-            android:paddingRight="30dp"
-            android:text="Dropped by Normal Bosses and Weekly Bosses"
-            android:textColor="#FFFFFF" />
-
-        <ImageView
-            android:id="@+id/lineDivider"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            app:srcCompat="@drawable/line_divider" />
-
-        <TextView
-            android:id="@+id/materialRarity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
-            android:paddingTop="30dp"
-            android:text="Rarity"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingLeft="30dp">
-
-            <ImageView
-                android:id="@+id/materialStar1"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:srcCompat="@drawable/card_star" />
-
-            <ImageView
-                android:id="@+id/materialStar2"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:srcCompat="@drawable/card_star" />
-
-            <ImageView
-                android:id="@+id/materialStar3"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:srcCompat="@drawable/card_star" />
-
-            <ImageView
-                android:id="@+id/materialStar4"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:srcCompat="@drawable/card_star" />
-
-            <ImageView
-                android:id="@+id/materialStar5"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                app:srcCompat="@drawable/card_star" />
-        </LinearLayout>
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottomNavigationView"

@@ -13,6 +13,6 @@ class DetailEnemyActivity : AppCompatActivity() {
         var itemName = intent.getStringExtra("itemName")
 
 
-        findViewById<TextView>(R.id.Title).text = itemName
+        findViewById<TextView>(R.id.enemyName).text = itemName
     }
 }

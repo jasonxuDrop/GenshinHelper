@@ -48,28 +48,29 @@
         android:textColor="#D7D0C6"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/timerFrame" />
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/resinAmount"
         android:layout_width="46dp"
         android:layout_height="28dp"
         android:layout_marginStart="124dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/genshin"
         android:gravity="center"
-        android:text=""
         android:textColor="#D7D0C6"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/timerFrame"
+        tools:text="" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/timerFrame"
         android:layout_width="310dp"
         android:layout_height="310dp"
         android:layout_marginTop="24dp"
+        android:translationZ="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,17 +80,15 @@
 
     <ProgressBar
         android:id="@+id/progress_bar"
-        android:layout_width="310dp"
-        android:layout_height="310dp"
+        android:layout_width="298dp"
+        android:layout_height="298dp"
         android:indeterminateOnly="false"
         android:progressDrawable="@drawable/circle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.514"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.239"
-        tools:progress="78" />
+        app:layout_constraintBottom_toBottomOf="@+id/timerFrame"
+        app:layout_constraintLeft_toLeftOf="@+id/timerFrame"
+        app:layout_constraintRight_toRightOf="@+id/timerFrame"
+        app:layout_constraintTop_toTopOf="@+id/timerFrame"
+        tools:progress="10" />
 
     <ImageButton
         android:id="@+id/btn_button"
@@ -101,7 +100,7 @@
         android:background="#00FFFFFF"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/timerFrame"
         app:srcCompat="@drawable/button_notification_off" />
 
     <ImageButton
@@ -115,39 +114,85 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/resinAmount"
         app:srcCompat="@drawable/ic_button_light" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="414dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="59dp"
         android:background="#1C1C1E"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageButton
+        <LinearLayout
             android:id="@+id/ResinNav"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="8dp"
-            android:background="#00FFFFFF"
-            android:text="Resin"
-            android:translationX="10dp"
-            android:translationY="5dp"
-            app:srcCompat="@drawable/resin_button" />
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_secondary_pressed"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="6dp">
 
-        <ImageButton
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingStart="12dp"
+                android:paddingBottom="2dp"
+                app:srcCompat="@drawable/icon_resin_svg_pressed" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:text="Resin"
+                android:textColor="#1C1C1E"
+                android:textSize="20sp"
+                android:translationY="-2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/SearchNav"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_marginTop="8dp"
-            android:background="#00FFFFFF"
-            android:text="Search"
-            android:translationX="265dp"
-            android:translationY="5dp"
-            app:srcCompat="@drawable/search_button" />
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_secondary_dark_default"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="6dp">
 
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingStart="12dp"
+                android:paddingBottom="2dp"
+                app:srcCompat="@drawable/icon_search_svg" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:text="Search"
+                android:textColor="#D7D0C6"
+                android:textSize="20sp"
+                android:translationY="-2dp" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

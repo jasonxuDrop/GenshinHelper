@@ -4,16 +4,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 
-class DetailCharacterActivity : AppCompatActivity() {
+class DetailMaterialActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.character_detailed)
+        setContentView(R.layout.material_detailed)
 
 
         var itemName = intent.getStringExtra("itemName")
 
 
-        findViewById<TextView>(R.id.characterName).text = itemName
+        findViewById<TextView>(R.id.materialName).text = itemName
 
     }
 }

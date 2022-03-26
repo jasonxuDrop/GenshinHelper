@@ -30,7 +30,7 @@ class ListWeaponActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.weapon_list)
+        setContentView(R.layout.main_list)
 
         option = findViewById<Spinner>(R.id.spnOption)
         //result = findViewById<TextView>(R.id.spnText)
