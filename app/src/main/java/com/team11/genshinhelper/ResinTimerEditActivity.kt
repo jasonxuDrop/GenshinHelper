@@ -49,7 +49,9 @@ class ResinTimerEditActivity : AppCompatActivity() {
         var intent = Intent(this, ResinTimerActivity::class.java)
         intent.putExtra("SOME_KEY", textToPass)
         startActivity(intent)
+        finish()
     }
+
     class ResinEditTextWatcher: TextWatcher {
         override fun afterTextChanged(p0: Editable?) {
             if (p0 != null && p0.isNotEmpty()) {

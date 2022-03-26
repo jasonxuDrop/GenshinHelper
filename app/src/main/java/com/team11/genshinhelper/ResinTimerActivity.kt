@@ -4,9 +4,8 @@ import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.content.Context
 import android.content.Intent
-import android.os.Build
-import android.os.Bundle
-import android.os.CountDownTimer
+import android.content.SharedPreferences
+import android.os.*
 import android.util.Log
 import android.widget.ImageButton
 import android.widget.LinearLayout
@@ -15,6 +14,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.app.NotificationManagerCompat.from
+import androidx.core.math.MathUtils
 import java.util.concurrent.TimeUnit
 
 class ResinTimerActivity : AppCompatActivity() {
@@ -26,15 +27,28 @@ class ResinTimerActivity : AppCompatActivity() {
     var setNotification = false
     var doSendNotification = true // TODO save this notification on/off bool && load the value in on create instead of defaulting to true
 
+    lateinit var notificationManager : NotificationManager
+    lateinit var sp : SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resin_timer)
 
-        val door = 3
-        resinAmmount = findViewById<TextView>(R.id.resinAmount)
-        resinAmmount.text = "0"                                                        // TODO load resinAmmount value from save
-        Log.d("test", resinAmmount.text.toString())
+        // user prefs
+        notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        sp = getSharedPreferences("pref", Context.MODE_PRIVATE)
+
+        // set the resin amount
+        resinAmmount = findViewById(R.id.resinAmount)
+        val resinInputFromEdit = intent.getStringExtra("SOME_KEY")
+        if (resinInputFromEdit.isNullOrEmpty())
+            setResinAmount(sp.getInt("resinCount", 0))
+        else {
+            resinAmmount.text = resinInputFromEdit
+            sp.edit()
+                .putInt("resinCount", resinInputFromEdit.toInt())
+                .apply()
+        }
 
         findViewById<ImageButton>(R.id.EditButton).setOnClickListener{
             val intent = Intent(this, ResinTimerEditActivity::class.java)
@@ -47,9 +61,6 @@ class ResinTimerActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val textToDisplay = intent.getStringExtra("SOME_KEY")
-        if (!textToDisplay.isNullOrEmpty())
-            resinAmmount.text = textToDisplay
 
         createNotificationChannel()
 
@@ -68,8 +79,7 @@ class ResinTimerActivity : AppCompatActivity() {
         }
 
         countDown()
-
-}
+    }
 
     fun saveText2(){
         var textView2 = findViewById<TextView>(R.id.resinAmount)
@@ -120,7 +130,7 @@ class ResinTimerActivity : AppCompatActivity() {
                 /*clearing all fields and displaying countdown finished message          */
                 resinTimer.setText("RESIN");
                 System.out.println("Available")
-                if (setNotification == true) {
+                if (setNotification) {
                     sendNotification()
                 }
             }
@@ -134,23 +144,30 @@ class ResinTimerActivity : AppCompatActivity() {
             val descriptionText = "Notification Description"
             val importance = NotificationManager.IMPORTANCE_DEFAULT
             val channel = NotificationChannel(CHANNEL_ID,name,importance).apply {
-            description = descriptionText
-             }
-            val notificationManager: NotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+                description = descriptionText
+            }
             notificationManager.createNotificationChannel(channel)
         }
     }
 
     private fun sendNotification(){
-        val builder = NotificationCompat.Builder(this, CHANNEL_ID)
+        notificationManager.cancel(1)
+
+        val notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setContentTitle("Resin Timer")
             .setContentText("You are able to get more Resin!!")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .build()
 
-        with(NotificationManagerCompat.from(this)){
-            notify(notificationId, builder.build())
-        }
+        Handler(Looper.getMainLooper()).postDelayed({
+            notificationManager.notify(1, notification)
+        }, 5000)
+    }
+
+    private fun setResinAmount(amount : Int) {
+        val a = MathUtils.clamp(amount, 0, 160)
+        resinAmmount.text = a.toString()
     }
 
 }
