@@ -12,17 +12,17 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/characterImage"
+            android:id="@+id/characterImage2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/card_background"
-            app:srcCompat="@drawable/example_character_diluc_thumb" />
+            app:srcCompat="@drawable/example_character_beidou_thumb" />
 
         <TextView
-            android:id="@+id/characterName"
+            android:id="@+id/characterName2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Diluc"
+            android:text="Beidou"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
@@ -33,18 +33,18 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/characterTypeIcon"
+                android:id="@+id/characterTypeIcon2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="100dp"
-                app:srcCompat="@drawable/element_pyro" />
+                app:srcCompat="@drawable/element_electro" />
 
             <TextView
-                android:id="@+id/characterType"
+                android:id="@+id/characterType2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pyro"
-                android:textColor="#FF7043"
+                android:text="Electro"
+                android:textColor="#BEAFE1"
                 android:textSize="18sp"
                 android:translationX="-10dp" />
 
@@ -76,13 +76,6 @@
                 android:translationY="5dp"
                 app:srcCompat="@drawable/card_star" />
 
-            <ImageView
-                android:id="@+id/star5"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:translationY="5dp"
-                app:srcCompat="@drawable/card_star" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -92,7 +85,7 @@
             android:paddingTop="30dp">
 
             <TextView
-                android:id="@+id/characterDescriptionTitle"
+                android:id="@+id/characterDescriptionTitle2"
                 android:layout_width="177dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="30dp"
@@ -108,7 +101,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/characterDescription"
+                android:id="@+id/characterDescription2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -133,7 +126,7 @@
             android:paddingTop="30dp">
 
             <TextView
-                android:id="@+id/characterWeapon"
+                android:id="@+id/characterWeapon2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="30dp"
@@ -142,7 +135,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/characterSkillsTitle"
+                android:id="@+id/characterSkillsTitle2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -158,7 +151,7 @@
             android:layout_height="40dp">
 
             <TextView
-                android:id="@+id/characterWeaponName"
+                android:id="@+id/characterWeaponName2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -202,7 +195,7 @@
             android:paddingTop="30dp">
 
             <TextView
-                android:id="@+id/characterConstellationTitle"
+                android:id="@+id/characterConstellationTitle2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Constellations"
