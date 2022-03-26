@@ -10,6 +10,7 @@ import android.os.CountDownTimer
 import android.util.Log
 import android.widget.ImageButton
 import android.widget.LinearLayout
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
@@ -32,7 +33,7 @@ class ResinTimerActivity : AppCompatActivity() {
 
         val door = 3
         resinAmmount = findViewById<TextView>(R.id.resinAmount)
-        resinAmmount.text = "22"                                                        // TODO load resinAmmount value from save
+        resinAmmount.text = "0"                                                        // TODO load resinAmmount value from save
         Log.d("test", resinAmmount.text.toString())
 
         findViewById<ImageButton>(R.id.EditButton).setOnClickListener{
@@ -82,6 +83,7 @@ class ResinTimerActivity : AppCompatActivity() {
     fun conversionForTimer(): Long {
         Log.d("test", "resinAmmount.getText().toString() = " + resinAmmount.text.toString())
         var converted = Integer.parseInt(resinAmmount.text.toString());
+        findViewById<ProgressBar>(R.id.progress_bar).progress = (((converted.toFloat()/160f)*100).toInt())
 
         val convertedNum = ((160 - converted) * 8) * 60000
 

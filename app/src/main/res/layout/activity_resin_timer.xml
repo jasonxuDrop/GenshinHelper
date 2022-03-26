@@ -63,7 +63,7 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timerFrame"
-        tools:text="22" />
+        tools:text="" />
 
     <ImageView
         android:id="@+id/timerFrame"
@@ -88,7 +88,7 @@
         app:layout_constraintLeft_toLeftOf="@+id/timerFrame"
         app:layout_constraintRight_toRightOf="@+id/timerFrame"
         app:layout_constraintTop_toTopOf="@+id/timerFrame"
-        tools:progress="60" />
+        tools:progress="10" />
 
     <ImageButton
         android:id="@+id/btn_button"
