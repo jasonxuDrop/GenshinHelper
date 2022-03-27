@@ -81,25 +81,9 @@ class ResinTimerActivity : AppCompatActivity() {
         }
 
         notificationButton = findViewById(R.id.btn_button)
-        if (sp.getBoolean("notification", true)) {
-            setNotification = true
-            notificationButton.setImageResource(R.drawable.button_notification_on)
-        }
-        else {
-            notificationButton.setImageResource(R.drawable.button_notification_off)
-            setNotification = false
-        }
+        updateNotification(sp.getBoolean("notification", true))
         notificationButton.setOnClickListener{
-            if (doSendNotification) {
-                doSendNotification = false
-                setNotification = true
-                notificationButton.setImageResource(R.drawable.button_notification_on)
-            }
-            else {
-                doSendNotification = true
-                notificationButton.setImageResource(R.drawable.button_notification_off)
-                setNotification = false
-            }
+            updateNotification (doSendNotification)
             sp.edit()
                 .putBoolean("notification", setNotification)
                 .apply()
@@ -221,5 +205,19 @@ class ResinTimerActivity : AppCompatActivity() {
         startTime = _startTime
         endTime = startTime + TIMER_DURATION
         countDown()
+    }
+
+
+    private fun updateNotification(b:Boolean){
+        if (b) {
+            doSendNotification = false
+            setNotification = true
+            notificationButton.setImageResource(R.drawable.button_notification_on)
+        }
+        else {
+            doSendNotification = true
+            setNotification = false
+            notificationButton.setImageResource(R.drawable.button_notification_off)
+        }
     }
 }
