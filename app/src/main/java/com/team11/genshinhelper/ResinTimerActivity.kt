@@ -14,14 +14,12 @@ import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
-import androidx.core.math.MathUtils
 import java.util.concurrent.TimeUnit
 import kotlin.math.roundToInt
 
 class ResinTimerActivity : AppCompatActivity() {
 
-    val NOTIFICATION_TOKEN = 1011432822
-    val TIMER_DURATION = 76800000.toLong()
+    val TIMER_DURATION = 76800000.toLong() // exact millisecond for the timer to complete
     var startTime : Long = 0 // read ONLY / do NOT SET value directly
     var endTime : Long = 0 // read ONLY / do NOT SET value directly
     lateinit var countDownTimer : CountDownTimer
@@ -170,6 +168,19 @@ class ResinTimerActivity : AppCompatActivity() {
         }, delay)
     }
 
+    private fun updateNotification(b:Boolean){
+        if (b) {
+            doSendNotification = false
+            setNotification = true
+            notificationButton.setImageResource(R.drawable.button_notification_on)
+        }
+        else {
+            doSendNotification = true
+            setNotification = false
+            notificationButton.setImageResource(R.drawable.button_notification_off)
+        }
+    }
+
 
 
     private fun amountToStartTime(resinAmount: String?): Long {
@@ -181,9 +192,9 @@ class ResinTimerActivity : AppCompatActivity() {
         val currentTime: Long = System.currentTimeMillis()
         updateTime(currentTime - timeSince0)
 
-        val TimeUntilFull = endTime - System.currentTimeMillis()
-        if (setNotification && TimeUntilFull > 0) {
-            sendNotification(TimeUntilFull)
+        val timeUntilFull = endTime - System.currentTimeMillis()
+        if (setNotification && timeUntilFull > 0) {
+            sendNotification(timeUntilFull)
         }
         return startTime
     }
@@ -205,19 +216,5 @@ class ResinTimerActivity : AppCompatActivity() {
         startTime = _startTime
         endTime = startTime + TIMER_DURATION
         countDown()
-    }
-
-
-    private fun updateNotification(b:Boolean){
-        if (b) {
-            doSendNotification = false
-            setNotification = true
-            notificationButton.setImageResource(R.drawable.button_notification_on)
-        }
-        else {
-            doSendNotification = true
-            setNotification = false
-            notificationButton.setImageResource(R.drawable.button_notification_off)
-        }
     }
 }
