@@ -137,10 +137,10 @@
                     android:id="@+id/baseAtkNum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
                     android:text="46"
-                    android:textSize="20sp"
-                    tools:paddingLeft="30dp"
-                    tools:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <ImageView
@@ -160,10 +160,10 @@
                     android:id="@+id/weaponSubStat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
                     android:text="Sub Stat"
-                    android:textColor="#FBFBFB"
-                    android:textSize="20sp"
-                    tools:paddingLeft="30dp" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/subStat"
@@ -171,8 +171,8 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="70dp"
                     android:text="ATK"
-                    android:textSize="20sp"
-                    tools:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <ImageView
@@ -233,10 +233,10 @@
                     android:id="@+id/weaponLocationDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="65dp"
+                    android:paddingLeft="70dp"
                     android:text="N/A"
-                    android:textSize="20sp"
-                    tools:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <Space

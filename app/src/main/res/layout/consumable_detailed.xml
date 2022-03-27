@@ -105,10 +105,10 @@
                     android:id="@+id/consumableTypeDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="120dp"
                     android:text="N/A"
-                    android:textSize="20sp"
-                    tools:paddingLeft="120dp"
-                    tools:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <ImageView
@@ -128,20 +128,19 @@
                     android:id="@+id/consumableEffect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
                     android:text="Effect"
-                    android:textColor="#FBFBFB"
-                    android:textSize="20sp"
-                    tools:paddingLeft="30dp" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/consumableEffectDetail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingLeft="100dp"
-                    android:paddingRight="30dp"
                     android:text="Revives a character and restores 1,200 HP"
-                    android:textSize="12sp"
-                    tools:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <ImageView
@@ -204,8 +203,8 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="40dp"
                     android:text="N/A"
-                    android:textSize="20sp"
-                    tools:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
             </LinearLayout>
 
             <Space
