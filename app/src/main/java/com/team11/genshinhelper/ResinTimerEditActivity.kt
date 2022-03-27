@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.content.ContextCompat.startActivity
 
@@ -22,14 +23,15 @@ class ResinTimerEditActivity : AppCompatActivity() {
         setContentView(R.layout.activity_resin_timer_edit)
 
         var resinInput = findViewById<EditText>(R.id.ResinInput)
+        resinInput.setText("0")
 
         resinInput.addTextChangedListener(ResinEditTextWatcher())
-        findViewById<Button>(R.id.Add5Button ).setOnClickListener(ResinEditButtonListener(  5, resinInput.text))
-        findViewById<Button>(R.id.Sub5Button ).setOnClickListener(ResinEditButtonListener( -5, resinInput.text))
-        findViewById<Button>(R.id.Add20Button).setOnClickListener(ResinEditButtonListener( 20, resinInput.text))
-        findViewById<Button>(R.id.Sub20Button).setOnClickListener(ResinEditButtonListener(-20, resinInput.text))
-        findViewById<Button>(R.id.Add40Button).setOnClickListener(ResinEditButtonListener( 40, resinInput.text))
-        findViewById<Button>(R.id.Sub40Button).setOnClickListener(ResinEditButtonListener(-40, resinInput.text))
+        findViewById<Button>(R.id.Add5Button ).setOnClickListener(ResinEditButtonListener(  5, resinInput))
+        findViewById<Button>(R.id.Sub5Button ).setOnClickListener(ResinEditButtonListener( -5, resinInput))
+        findViewById<Button>(R.id.Add20Button).setOnClickListener(ResinEditButtonListener( 20, resinInput))
+        findViewById<Button>(R.id.Sub20Button).setOnClickListener(ResinEditButtonListener(-20, resinInput))
+        findViewById<Button>(R.id.Add40Button).setOnClickListener(ResinEditButtonListener( 40, resinInput))
+        findViewById<Button>(R.id.Sub40Button).setOnClickListener(ResinEditButtonListener(-40, resinInput))
 
 //        TODO: use `resinInput.setText("68")` to edit the current resin amount when page opens
 //        TODO: use `resinInput.text.toString().toInt() for getting the value the user put in
@@ -68,25 +70,26 @@ class ResinTimerEditActivity : AppCompatActivity() {
         override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
     }
 
-    class ResinEditButtonListener (private val changeAmount : Int, var resinInput : Editable): View.OnClickListener {
+    class ResinEditButtonListener (private val changeAmount : Int, var resinInput : EditText): View.OnClickListener {
 
         override fun onClick(p0: View?) {
-            Log.d("log", "button pressed, adding $changeAmount to resinInput")
 
             var currentAmount: Int = 0
-            if (resinInput.isNotEmpty())
-                currentAmount = resinInput.toString().toInt()
+           if (resinInput.text.isNotEmpty())
+                currentAmount = resinInput.text.toString().toInt()
+
 
             currentAmount += changeAmount;
+
             when {
                 currentAmount > 160 -> {
-                    resinInput.replace(0,resinInput.length,"160")
+                    resinInput.text.replace(0,resinInput.text.length,"160")
                 }
                 currentAmount < 0 -> {
-                    resinInput.replace(0,resinInput.length,"0")
+                    resinInput.text.replace(0,resinInput.text.length,"0")
                 }
                 else -> {
-                    resinInput.replace(0,resinInput.length,currentAmount.toString())
+                    resinInput.text.replace(0,resinInput.text.length,currentAmount.toString())
                 }
             }
         }
