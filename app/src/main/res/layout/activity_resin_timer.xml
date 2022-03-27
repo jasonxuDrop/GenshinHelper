@@ -68,11 +68,12 @@
     <TextView
         android:layout_width="46dp"
         android:layout_height="28dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
         android:textColor="#929091"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/resinAmount"
+        app:layout_constraintStart_toEndOf="@+id/resinText"
         app:layout_constraintTop_toBottomOf="@+id/timerFrame"
         tools:text="/160" />
 

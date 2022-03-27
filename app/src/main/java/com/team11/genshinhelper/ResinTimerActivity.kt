@@ -50,8 +50,6 @@ class ResinTimerActivity : AppCompatActivity() {
                     .putLong("startTime", startTime)
                     .apply()
             }
-
-            // TODO SCHEDULE NOTIFICATION
         }
     }
 
@@ -66,15 +64,6 @@ class ResinTimerActivity : AppCompatActivity() {
         // set the resin amount
         resinAmount = findViewById(R.id.resinAmount)
         progressBar = findViewById(R.id.progress_bar)
-//        val resinInputFromEdit = intent.getStringExtra("SOME_KEY")
-//        if (resinInputFromEdit.isNullOrEmpty())
-//            setResinAmount(sp.getInt("resinCount", 0))
-//        else {
-//            resinAmount.text = resinInputFromEdit
-//            sp.edit()
-//                .putInt("resinCount", resinInputFromEdit.toInt())
-//                .apply()
-//        }
 
         findViewById<ImageButton>(R.id.EditButton).setOnClickListener{
             val intent = Intent(this, ResinTimerEditActivity::class.java)
@@ -86,6 +75,9 @@ class ResinTimerActivity : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.SearchNav).setOnClickListener{
             val intent = Intent(this, ListActivityMain::class.java)
             startActivity(intent)
+            if (timerInitialized)
+                countDownTimer.cancel()
+            finish()
         }
 
         notificationButton = findViewById(R.id.btn_button)
@@ -116,18 +108,6 @@ class ResinTimerActivity : AppCompatActivity() {
         loadStartTime()
         createNotificationChannel()
     }
-
-
-
-//    fun conversionForTimer(): Long {
-//        Log.d("test", "resinAmount.getText().toString() = " + resinAmount.text.toString())
-//        var converted = Integer.parseInt(resinAmount.text.toString());
-//        findViewById<ProgressBar>(R.id.progress_bar).progress = (((converted.toFloat()/160f)*100).toInt())
-//
-//        val convertedNum = ((160 - converted) * 8) * 60000
-//
-//        return convertedNum.toLong()
-//    }
 
 
 
