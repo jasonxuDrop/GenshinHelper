@@ -6,11 +6,14 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.*
+import android.preference.PreferenceManager
 import android.util.Log
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.activity.result.ActivityResultCallback
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
@@ -51,9 +54,17 @@ class ResinTimerActivity : AppCompatActivity() {
         }
 
         findViewById<ImageButton>(R.id.EditButton).setOnClickListener{
-            val intent = Intent(this, ResinTimerEditActivity::class.java)
-            startActivity(intent)
-            saveText2()
+//            val intent = Intent(this, ResinTimerEditActivity::class.java)
+//            val currentAmount = resinAmmount.text.toString()
+//            intent.putExtra("SOME_KEY2", currentAmount)
+//            startActivityForResult(intent, 1)
+
+            val editResinCount = registerForActivityResult(
+                ActivityResultContracts.GetContent()
+            ) {
+                Log.d("get result from act", it.toString())
+            }
+
         }
 
         findViewById<LinearLayout>(R.id.SearchNav).setOnClickListener{
@@ -81,14 +92,15 @@ class ResinTimerActivity : AppCompatActivity() {
         countDown()
     }
 
-    fun saveText2(){
-        var textView2 = findViewById<TextView>(R.id.resinAmount)
-        var textToPass2 = textView2.text.toString()
 
-        var intent = Intent(this, ResinTimerEditActivity::class.java)
-        intent.putExtra("SOME_KEY2", textToPass2)
-        startActivity(intent)
-    }
+//    fun saveText2(){
+//        var textView2 = findViewById<TextView>(R.id.resinAmount)
+//        var textToPass2 = textView2.text.toString()
+//
+//        var intent = Intent(this, ResinTimerEditActivity::class.java)
+//        intent.putExtra("SOME_KEY2", textToPass2)
+//        startActivity(intent)
+//    }
 
     fun conversionForTimer(): Long {
         Log.d("test", "resinAmmount.getText().toString() = " + resinAmmount.text.toString())
