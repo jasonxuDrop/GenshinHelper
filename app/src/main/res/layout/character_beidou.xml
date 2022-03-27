@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/beidouDetailPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/beidouImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card_background"
+                    app:srcCompat="@drawable/example_character_beidou_thumb" />
+
+                <TextView
+                    android:id="@+id/characterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Beidou"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/beidouTypeIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="100dp"
+                        app:srcCompat="@drawable/element_electro" />
+
+                    <TextView
+                        android:id="@+id/beidouType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Electro"
+                        android:textColor="#BEAFE1"
+                        android:textSize="18sp"
+                        android:translationX="-10dp" />
+
+                    <ImageView
+                        android:id="@+id/star1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:translationY="5dp"
+                        app:srcCompat="@drawable/card_star" />
+
+                    <ImageView
+                        android:id="@+id/star2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:translationY="5dp"
+                        app:srcCompat="@drawable/card_star" />
+
+                    <ImageView
+                        android:id="@+id/star3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:translationY="5dp"
+                        app:srcCompat="@drawable/card_star" />
+
+                    <ImageView
+                        android:id="@+id/star4"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:translationY="5dp"
+                        app:srcCompat="@drawable/card_star" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:id="@+id/cbeidouDescriptionTitle"
+                        android:layout_width="177dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:text="Description"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/beidouDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at rhoncus risus. Mauris pharetra, nulla sed maximus pulvinar, erat metus dapibus nibh "
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    app:srcCompat="@drawable/line_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:id="@+id/beidouWeapon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        android:text="Weapon"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/beidouSkillsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="125dp"
+                        android:text="Skills"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <TextView
+                        android:id="@+id/beidouWeaponName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:text="Claymore"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/beidouSkill1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/skill_1" />
+
+                    <ImageView
+                        android:id="@+id/beidouSkill3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="80dp"
+                        app:srcCompat="@drawable/skill_3" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    app:srcCompat="@drawable/line_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:paddingTop="30dp">
+
+                    <TextView
+                        android:id="@+id/beidouConstellationTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Constellations"
+                        android:textColor="#FBFBFB"
+                        android:textSize="20sp"
+                        tools:paddingLeft="30dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/beidouConstellation1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="30dp"
+                        app:srcCompat="@drawable/constellation_1" />
+
+                    <ImageView
+                        android:id="@+id/beidouConstellation3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/constellation_3" />
+
+                    <ImageView
+                        android:id="@+id/beidouConstellation5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/constellation_5" />
+
+                    <ImageView
+                        android:id="@+id/beidouConstellation6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/constellation_6" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="#1C1C1E"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/ResinNav"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_secondary_dark_default"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingStart="12dp"
+                android:paddingBottom="2dp"
+                app:srcCompat="@drawable/icon_resin_svg" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:text="Resin"
+                android:textColor="#D7D0C6"
+                android:textSize="20sp"
+                android:translationY="-2dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SearchNav"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_secondary_pressed"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="6dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:paddingStart="12dp"
+                android:paddingBottom="2dp"
+                app:srcCompat="@drawable/icon_search_svg_pressed" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:text="Search"
+                android:textColor="#1C1C1E"
+                android:textSize="20sp"
+                android:translationY="-2dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
