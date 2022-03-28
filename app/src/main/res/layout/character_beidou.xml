@@ -25,13 +25,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/card_background"
-                app:srcCompat="@drawable/example_character_diluc_thumb" />
+                app:srcCompat="@drawable/example_character_beidou_thumb" />
 
             <TextView
                 android:id="@+id/characterName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Diluc"
+                android:text="Beidou"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
@@ -46,14 +46,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:paddingLeft="100dp"
-                    app:srcCompat="@drawable/element_pyro" />
+                    app:srcCompat="@drawable/element_electro" />
 
                 <TextView
                     android:id="@+id/characterType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pyro"
-                    android:textColor="#FF7043"
+                    android:text="Electro"
+                    android:textColor="#CCB8EF"
                     android:textSize="18sp"
                     android:translationX="-10dp" />
 
@@ -80,13 +80,6 @@
 
                 <ImageView
                     android:id="@+id/star4"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:translationY="5dp"
-                    app:srcCompat="@drawable/card_star" />
-
-                <ImageView
-                    android:id="@+id/star5"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:translationY="5dp"
@@ -123,7 +116,7 @@
                     android:layout_weight="1"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at rhoncus risus. Mauris pharetra, nulla sed maximus pulvinar, erat metus dapibus nibh asasfasdf asd a d fa dga sda gsd gad gasd asd gasdg asdg asdg asd ga sdg asdg asdg asdg asd ga sdg qwrg asdg asdg aer gas dgas dg ae as dg a eg asd g ae g"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at rhoncus risus. Mauris pharetra, nulla sed maximus pulvinar, erat metus dapibus nibh asasfasdf as"
                     android:textColor="#FFFFFF"
                     android:textSize="12sp" />
             </LinearLayout>
@@ -183,16 +176,10 @@
                     app:srcCompat="@drawable/skill_1" />
 
                 <ImageView
-                    android:id="@+id/characterSkill2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/skill_2" />
-
-                <ImageView
                     android:id="@+id/characterSkill3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingRight="30dp"
+                    android:paddingRight="75dp"
                     app:srcCompat="@drawable/skill_3" />
 
             </LinearLayout>
@@ -234,22 +221,10 @@
                     app:srcCompat="@drawable/constellation_1" />
 
                 <ImageView
-                    android:id="@+id/characterConstellation2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/constellation_2" />
-
-                <ImageView
                     android:id="@+id/characterConstellation3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/constellation_3" />
-
-                <ImageView
-                    android:id="@+id/characterConstellation4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/constellation_4" />
 
                 <ImageView
                     android:id="@+id/characterConstellation5"

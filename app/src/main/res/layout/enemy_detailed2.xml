@@ -12,111 +12,101 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/artifactImage"
+            android:id="@+id/enemyImage2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/card_background"
-            app:srcCompat="@drawable/example_item_maidens_distant_love" />
+            app:srcCompat="@drawable/example_enemy_pyro_whopperflower_icon" />
 
         <TextView
-            android:id="@+id/artifactName"
+            android:id="@+id/enemyName2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Maiden's Beloved"
+            android:text="Whopperflower"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/enemyElementIcon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="100dp"
+                app:srcCompat="@drawable/element_pyro" />
+
+            <TextView
+                android:id="@+id/enemyElement2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pyro"
+                android:textColor="#FF7043"
+                android:translationX="-10dp"
+                tools:paddingTop="5dp" />
+
+            <TextView
+                android:id="@+id/enemyType2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elite Enemy"
+                android:textColor="#929091"
+                tools:paddingTop="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="60dp"
             android:orientation="horizontal"
             android:paddingTop="30dp">
 
             <TextView
-                android:id="@+id/artifactRarity"
+                android:id="@+id/enemyDrops2"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:paddingLeft="30dp"
-                android:text="Rarity"
+                android:text="Drops"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="29dp"
-                android:orientation="horizontal"
-                android:paddingLeft="100dp"
-                android:paddingTop="10dp">
-
-                <ImageView
-                    android:id="@+id/artifactStar1"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    app:srcCompat="@drawable/card_star" />
-
-                <ImageView
-                    android:id="@+id/artifactStar2"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    app:srcCompat="@drawable/card_star" />
-
-                <ImageView
-                    android:id="@+id/artifactStar3"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    app:srcCompat="@drawable/card_star" />
-
-                <ImageView
-                    android:id="@+id/artifactStar4"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    app:srcCompat="@drawable/card_star" />
-
-                <ImageView
-                    android:id="@+id/artifactStar5"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    app:srcCompat="@drawable/card_star" />
-
-            </LinearLayout>
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="10dp"
-            app:srcCompat="@drawable/line_divider" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:paddingTop="30dp">
+            android:layout_height="40dp"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/artifact2Piece"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="30dp"
-                android:text="2-Piece Bonus"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/artifact2PieceDetail"
+            <ImageView
+                android:id="@+id/enemyDrop1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:paddingRight="30dp"
-                android:text="Character healing effectiveness +15%"
-                android:textColor="#FFFFFF"
-                android:textSize="10sp" />
+                app:srcCompat="@drawable/drop_4" />
+
+            <ImageView
+                android:id="@+id/enemyDrop2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/drop_3" />
+
+            <ImageView
+                android:id="@+id/enemyDrop3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/drop_2" />
+
+            <ImageView
+                android:id="@+id/enemyDrop4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/drop_1" />
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/imageView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
@@ -129,23 +119,92 @@
             android:paddingTop="30dp">
 
             <TextView
-                android:id="@+id/artifact4Piece"
+                android:id="@+id/enemyRegionTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="30dp"
-                android:text="4-Piece Bonus"
+                android:text="Region"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp" />
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/artifact4PieceDetail"
+                android:id="@+id/enemyRegionName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="- Mondstadt"
+                android:textColor="#FFFFFF" />
+
+            <TextView
+                android:id="@+id/enemyRegionName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="50dp"
+                android:text="- Liyue"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            app:srcCompat="@drawable/line_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:paddingTop="30dp">
+
+            <TextView
+                android:id="@+id/enemyArtifactName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingLeft="15dp"
-                android:paddingRight="30dp"
-                android:text="Using an elemental skill or burst increases healing received by all party members by 20% for 10s"
-                android:textColor="#FFFFFF"
-                android:textSize="10sp" />
+                android:text="Artifacts"
+                android:textColor="#FBFBFB"
+                android:textSize="20sp"
+                tools:paddingLeft="30dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/enemyArtifact1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                app:srcCompat="@drawable/artifact_1" />
+
+            <ImageView
+                android:id="@+id/enemyArtifact2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/artifact_2" />
+
+            <ImageView
+                android:id="@+id/enemyArtifact3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/artifact_3" />
+
+            <ImageView
+                android:id="@+id/enemyArtifact4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/artifact_4" />
         </LinearLayout>
     </LinearLayout>
 
