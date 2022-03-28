@@ -9,24 +9,41 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.team11.genshinhelper.Common.*
+import kotlin.reflect.KClass
 
+// TODO THIS RECYCLER VIEW IS USING CUSTOM ARRAYS FOR DATA, WOULD RECOMMEND ADDING API FOR OTHER RECYCLER LISTS FIRST @Paul
 class RecyclerAdapterCharacter : RecyclerView.Adapter<RecyclerAdapterCharacter.ViewHolder>() {
 
     // PLACEHOLDER VALUES
     private val titles = arrayOf(
-        "Character 1",
-        "Character 2",
-        "Character 3",
-        "Character 4",
-        "Character 5",
-        "Character 6",
-        "Character 7",
-        "Character 8",
-        "Character 9",
-        "Character 10",
-        "Character 11 has a longer name",
-        "Character 12",
-        "Character 13",
+        "Diluc",
+        "Klee",
+        "Beidou",
+    )
+    private val thumbnails = arrayOf (
+        R.drawable.example_character_diluc_thumb,
+        R.drawable.example_character_klee_thumb,
+        R.drawable.example_character_beidou_thumb,
+    )
+    private val backgrounds = arrayOf (
+        Common.backgroundImages[4],
+        Common.backgroundImages[4],
+        Common.backgroundImages[3],
+    )
+    private val elementLayouts = arrayOf (
+        Element.Pyro.layout,
+        Element.Pyro.layout,
+        Element.Electro.layout,
+    )
+    private val starLayouts = arrayOf (
+        Common.starLayout[4],
+        Common.starLayout[4],
+        Common.starLayout[3],
+    )
+    private val detailActivities = arrayOf (
+        DetailCharacterActivity::class.java,
+        DetailCharacterActivity3::class.java,
+        DetailCharacterActivity2::class.java,
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapterCharacter.ViewHolder {
@@ -35,23 +52,24 @@ class RecyclerAdapterCharacter : RecyclerView.Adapter<RecyclerAdapterCharacter.V
     }
 
     override fun onBindViewHolder(holder: RecyclerAdapterCharacter.ViewHolder, position: Int) {
-        holder.title.text = titles[position] // TODO set item name
-        holder.image.setImageResource(R.drawable.example_character_beidou_thumb) // TODO set item image
-        holder.imageBackground.setImageResource(Common.backgroundImages[position%5]) // TODO set star/rarity background (ie. 3 star item => Common.backgroundImages[3-1])
+        holder.title.text = titles[position/4] // TODO set item name
+        holder.image.setImageResource(thumbnails[position/4]) // TODO set item image
+        holder.imageBackground.setImageResource(backgrounds[position/4]) // TODO set star/rarity background (ie. 3 star item => Common.backgroundImages[3-1])
         if (holder.elementStubInflated == null){
-            holder.elementStub.layoutResource = Element.Geo.layout // TODO set star/rarity (ie. Electro element => Element.Electro.layout)
+            holder.elementStub.layoutResource = elementLayouts[position/4] // TODO set star/rarity (ie. Electro element => Element.Electro.layout)
             holder.elementStubInflated = holder.elementStub.inflate()
         }
         if (holder.starStubInflated == null) {
-            holder.starStub.layoutResource = Common.starLayout[position % 5] // TODO set star/rarity (ie. 3 star item => starLayout[3-1])
+            holder.starStub.layoutResource = starLayouts[position/4] // TODO set star/rarity (ie. 3 star item => starLayout[3-1])
             holder.starStubInflated = holder.starStub.inflate()
         }
+        holder.setActivityToOpen(detailActivities[position/4])
         // TODO populate with database data
     }
 
     override fun getItemCount(): Int {
         // TODO need to get the Item Count from database
-        return titles.size
+        return titles.size * 4
     }
 
 
@@ -65,8 +83,12 @@ class RecyclerAdapterCharacter : RecyclerView.Adapter<RecyclerAdapterCharacter.V
         var starStubInflated : View? = null
 
         init {
+            // TODO Open detail activity and pass on extra data used to populate it
+        }
+
+        fun setActivityToOpen(activity : Class<*>) {
             itemView.setOnClickListener{
-                val intent = Intent(itemView.context, DetailCharacterActivity::class.java)
+                val intent = Intent(itemView.context, activity)
                 intent.putExtra("itemName", title.text)
 
                 itemView.context.startActivity(intent)

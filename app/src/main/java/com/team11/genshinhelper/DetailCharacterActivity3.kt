@@ -6,16 +6,16 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import android.widget.TextView
 
-class DetailArtifactActivity : AppCompatActivity() {
+class DetailCharacterActivity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.artifact_detailed)
+        setContentView(R.layout.character_klee)
 
 
         var itemName = intent.getStringExtra("itemName")
 
 
-        findViewById<TextView>(R.id.artifactName).text = itemName
+        findViewById<TextView>(R.id.characterName).text = itemName
 
 
         findViewById<LinearLayout>(R.id.ResinNav).setOnClickListener{

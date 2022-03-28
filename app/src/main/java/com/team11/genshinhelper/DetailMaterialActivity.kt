@@ -1,7 +1,9 @@
 package com.team11.genshinhelper
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.LinearLayout
 import android.widget.TextView
 
 class DetailMaterialActivity : AppCompatActivity() {
@@ -15,5 +17,11 @@ class DetailMaterialActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.materialName).text = itemName
 
+
+        findViewById<LinearLayout>(R.id.ResinNav).setOnClickListener{
+            val intent = Intent(this, ResinTimerActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

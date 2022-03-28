@@ -64,6 +64,7 @@ class ListActivityMain : AppCompatActivity() {
         findViewById<LinearLayout>(R.id.ResinNav).setOnClickListener{
             val intent = Intent(this, ResinTimerActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
         // RECYCLER VIEW STUFF

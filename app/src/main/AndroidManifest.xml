@@ -16,6 +16,12 @@
             android:name=".DetailCharacterActivity"
             android:exported="false" />
         <activity
+            android:name=".DetailCharacterActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".DetailCharacterActivity3"
+            android:exported="false" />
+        <activity
             android:name=".DetailConsumableActivity"
             android:exported="false" />
         <activity
