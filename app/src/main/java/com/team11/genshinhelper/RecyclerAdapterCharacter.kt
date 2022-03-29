@@ -57,7 +57,6 @@ class RecyclerAdapterCharacter : RecyclerView.Adapter<RecyclerAdapterCharacter.V
         return titles.size
     }
 
-
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var title : TextView = itemView.findViewById(R.id.CardTitle)
         var image: ImageView = itemView.findViewById(R.id.CardItem)
